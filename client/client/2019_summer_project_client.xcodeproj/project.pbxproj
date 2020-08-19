@@ -10,6 +10,15 @@
 		A502448C22D6CE3400741B0A /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A502448B22D6CE3400741B0A /* libcurl.dylib */; };
 		A502448D22D6CE3D00741B0A /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A502448922D6CE2400741B0A /* libcurl.a */; };
 		A572372F22CF18C8003870E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A572372E22CF18C8003870E9 /* main.cpp */; };
+		A58966D422EF92B300D3B2C8 /* libjsoncpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A58966D322EF92B300D3B2C8 /* libjsoncpp.a */; };
+		A5CD6C4222F4C73600B128A0 /* request_sender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6C4022F4C73600B128A0 /* request_sender.cpp */; };
+		A5CD6C4522F4D3CE00B128A0 /* request_sender_binary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6C4322F4D3CE00B128A0 /* request_sender_binary.cpp */; };
+		A5CD6C4822F4D47900B128A0 /* request_sender_http.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6C4622F4D47900B128A0 /* request_sender_http.cpp */; };
+		A5CD6C4B22F7EA6300B128A0 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6C4922F7EA6300B128A0 /* timer.cpp */; };
+		A5E29AC122DFDB8100A00DDB /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E29ABD22DFDB8100A00DDB /* libcrypto.dylib */; };
+		A5E29AC222DFDB8100A00DDB /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E29ABE22DFDB8100A00DDB /* libssl.a */; };
+		A5E29AC322DFDB8100A00DDB /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E29ABF22DFDB8100A00DDB /* libssl.dylib */; };
+		A5E29AC422DFDB8100A00DDB /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E29AC022DFDB8100A00DDB /* libcrypto.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -265,6 +274,19 @@
 		A502448B22D6CE3400741B0A /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = ../../../../../../usr/local/curl/lib/libcurl.dylib; sourceTree = "<group>"; };
 		A572372B22CF18C8003870E9 /* 2019_summer_project_client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 2019_summer_project_client; sourceTree = BUILT_PRODUCTS_DIR; };
 		A572372E22CF18C8003870E9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A58966D322EF92B300D3B2C8 /* libjsoncpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjsoncpp.a; path = "../../api/jsoncpp-master/build/debug/src/lib_json/libjsoncpp.a"; sourceTree = "<group>"; };
+		A5CD6C4022F4C73600B128A0 /* request_sender.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = request_sender.cpp; sourceTree = "<group>"; };
+		A5CD6C4122F4C73600B128A0 /* request_sender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = request_sender.h; sourceTree = "<group>"; };
+		A5CD6C4322F4D3CE00B128A0 /* request_sender_binary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = request_sender_binary.cpp; sourceTree = "<group>"; };
+		A5CD6C4422F4D3CE00B128A0 /* request_sender_binary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = request_sender_binary.h; sourceTree = "<group>"; };
+		A5CD6C4622F4D47900B128A0 /* request_sender_http.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = request_sender_http.cpp; sourceTree = "<group>"; };
+		A5CD6C4722F4D47900B128A0 /* request_sender_http.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = request_sender_http.h; sourceTree = "<group>"; };
+		A5CD6C4922F7EA6300B128A0 /* timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timer.cpp; sourceTree = "<group>"; };
+		A5CD6C4A22F7EA6300B128A0 /* timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = timer.h; sourceTree = "<group>"; };
+		A5E29ABD22DFDB8100A00DDB /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../openssl-1.1.1c/libcrypto.dylib"; sourceTree = "<group>"; };
+		A5E29ABE22DFDB8100A00DDB /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../openssl-1.1.1c/libssl.a"; sourceTree = "<group>"; };
+		A5E29ABF22DFDB8100A00DDB /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../openssl-1.1.1c/libssl.dylib"; sourceTree = "<group>"; };
+		A5E29AC022DFDB8100A00DDB /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../openssl-1.1.1c/libcrypto.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +296,11 @@
 			files = (
 				A502448C22D6CE3400741B0A /* libcurl.dylib in Frameworks */,
 				A502448D22D6CE3D00741B0A /* libcurl.a in Frameworks */,
+				A5E29AC122DFDB8100A00DDB /* libcrypto.dylib in Frameworks */,
+				A5E29AC222DFDB8100A00DDB /* libssl.a in Frameworks */,
+				A5E29AC322DFDB8100A00DDB /* libssl.dylib in Frameworks */,
+				A5E29AC422DFDB8100A00DDB /* libcrypto.a in Frameworks */,
+				A58966D422EF92B300D3B2C8 /* libjsoncpp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +310,11 @@
 		A50242AE22D6B52300741B0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A58966D322EF92B300D3B2C8 /* libjsoncpp.a */,
+				A5E29AC022DFDB8100A00DDB /* libcrypto.a */,
+				A5E29ABD22DFDB8100A00DDB /* libcrypto.dylib */,
+				A5E29ABE22DFDB8100A00DDB /* libssl.a */,
+				A5E29ABF22DFDB8100A00DDB /* libssl.dylib */,
 				A502448B22D6CE3400741B0A /* libcurl.dylib */,
 				A502448922D6CE2400741B0A /* libcurl.a */,
 				A502448622D6BB2200741B0A /* libcurl.4.dylib */,
@@ -546,6 +578,14 @@
 			isa = PBXGroup;
 			children = (
 				A572372E22CF18C8003870E9 /* main.cpp */,
+				A5CD6C4122F4C73600B128A0 /* request_sender.h */,
+				A5CD6C4022F4C73600B128A0 /* request_sender.cpp */,
+				A5CD6C4422F4D3CE00B128A0 /* request_sender_binary.h */,
+				A5CD6C4322F4D3CE00B128A0 /* request_sender_binary.cpp */,
+				A5CD6C4722F4D47900B128A0 /* request_sender_http.h */,
+				A5CD6C4622F4D47900B128A0 /* request_sender_http.cpp */,
+				A5CD6C4A22F7EA6300B128A0 /* timer.h */,
+				A5CD6C4922F7EA6300B128A0 /* timer.cpp */,
 			);
 			path = 2019_summer_project_client;
 			sourceTree = "<group>";
@@ -606,6 +646,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5CD6C4822F4D47900B128A0 /* request_sender_http.cpp in Sources */,
+				A5CD6C4B22F7EA6300B128A0 /* timer.cpp in Sources */,
+				A5CD6C4522F4D3CE00B128A0 /* request_sender_binary.cpp in Sources */,
+				A5CD6C4222F4C73600B128A0 /* request_sender.cpp in Sources */,
 				A572372F22CF18C8003870E9 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,8 +776,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XXAHN3WU5;
-				HEADER_SEARCH_PATHS = /usr/local/curl/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/curl/lib;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/curl/include,
+					"../../api/openssl-1.1.1c/include",
+					"../../api/jsoncpp-master/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/curl/lib,
+					"../../api/openssl-1.1.1c",
+					"../../api/jsoncpp-master/build/debug/src/lib_json",
+				);
+				NEW_SETTING = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -744,8 +797,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XXAHN3WU5;
-				HEADER_SEARCH_PATHS = /usr/local/curl/include;
-				LIBRARY_SEARCH_PATHS = /usr/local/curl/lib;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/curl/include,
+					"../../api/openssl-1.1.1c/include",
+					"../../api/jsoncpp-master/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/curl/lib,
+					"../../api/openssl-1.1.1c",
+					"../../api/jsoncpp-master/build/debug/src/lib_json",
+				);
+				NEW_SETTING = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
