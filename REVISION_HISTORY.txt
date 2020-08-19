@@ -1,0 +1,172 @@
+================================================================================
+Client
+================================================================================
+Ver0001: 20190704
+	- basic client that connects to c++ synchronous server using socket
+
+Ver0002: 20190704
+	- sends character that is read through can
+
+Ver0003: 20190710
+	- use curl to send http post request to java servlet server
+
+Ver0004: 20190710
+	- use curl to send http post request to node.js server
+
+Ver0005: 20190717
+	- first usage of openssl api
+	- created public and private pemkey pair
+	- encrypt and decrypt message with the pemkey pair (client side only)
+
+Ver0006: 20190722
+	- exchanged pemkeys with c++ servers
+	- encrypt out going message and decrypt incoming message
+
+Ver0007: 20190729
+	- first usage of jsoncpp api
+	- send data within the https request body (not in json format)
+
+Ver0008: 20190730
+	- send data in json format
+
+Ver0009: 20190802
+	- create wrapper class for sending requests to server (RequestSender, 
+	  RequestSenderBinary, RequestSenderHTTP)
+
+Ver0010: 20190804
+	- create wrapper class for measuring time (Timer)
+
+Ver0011: 20190805
+	- send multiple requests at the same time using multiple threads
+
+Ver0012: 20190806
+	- test to see if multithread is working properly
+
+Ver0013: 20190808
+	- read pemkeys only once instead reading it every request
+
+Ver0014: 20190812
+	- test to see if curl library works with processes
+
+Ver0015: 20190814
+	- create a new file directory for each request to the C++ server
+
+Ver0016: 20190827
+	- fix server crashing bug
+
+Ver0017: 20190828
+	- send chat request to client and read response accordingly
+
+Ver0018: 20190903
+	- read chat request and video request differently for C++ servers
+
+Ver0019: 20190904
+	- upgrade users interface for C++ servers
+
+Ver0019: 20190905
+	- upgrade users interface for JavaServlet and Node.js servers
+================================================================================
+C++ Synchronous Server
+================================================================================
+Ver0001: 20190709
+	- basic c++ synchronous server using socket
+
+Ver0002: 20190722
+	- first usage of openssl api
+	- encrypt out going message and decrypt incoming message
+
+Ver0003: 20190726
+	- handle multiple requests simultaneously using threads
+
+Ver0004: 20190805
+	- read pem keys only once to avoid multiple threads reading the same 
+	  file at the same time
+
+Ver0005: 20190814
+	- opencv library attempted to be added but with no success
+	- error when compiling
+
+Ver0006: 20190814
+	- opencv library works correctly
+
+Ver0007: 20190806
+	- store uncompressed video data onto rtmp object
+
+Ver0008: 20190825
+	- test reading from txt file as binary
+
+Ver0009: 20190825
+	- send video data using custom protocol
+	- server crashed occasionally due to bug
+
+Ver0010: 20190828
+	- handle chat request from client
+
+Ver0011: 20190905
+	- small tweaks to match latest client version
+================================================================================
+C++ Asynchronous Server
+================================================================================
+Ver0001: 20190719
+	- basic c++ asynchronous server using socket and linux poll
+
+Ver0002: 20190722
+	- first usage of openssl api
+	- encrypt out going message and decrypt incoming message
+
+Ver0003: 20190726
+	- handle multiple requests simultaneously using threads
+
+Ver0004: 20190814
+	- read pem keys only once to avoid multiple threads reading the same 
+	  file at the same time
+
+Ver0005: 20190903
+	- caught up to sync ver0017
+	- separate requests into video request and chat request
+	- bug when client requests video (does not crash server)
+
+Ver0006: 20190905
+	- small tweaks to match latest client version
+================================================================================
+Java Servlet Server
+================================================================================
+Ver0001: 20190709
+	- basic java servlet http server that can handle get requests
+
+Ver0002: 20190710
+	- handle post requests
+
+Ver0003: 20190730
+	- first usage of gson api
+	- obtain data from https request body 
+	- deserialize json string
+
+Ver0004: 20190905
+	- caught up to latest C++ servers
+================================================================================
+Node.js Server
+================================================================================
+Ver0001: 20190712
+	- basic node.js http server that can handle handle requests
+
+Ver0002: 20190722
+	- first usage of express api
+	- handle get and post requests separately
+
+Ver0003: 20190725
+	- generate pemkey and certificate
+	- change server into https
+
+Ver0004: 20190729
+	- first usage of body parser api
+	- obtain data from https request body
+
+Ver0005: 20190730
+	- deserialize json string
+
+Ver0006: 20190812
+	- test to see if curl library works with processes
+
+Ver0007: 20190905
+	- small tweaks to match latest client version

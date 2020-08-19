@@ -1,0 +1,51 @@
+================================================================================
+
+Project name: kj_server_benchmark
+Objectives: 
+	- Create a tool to compare the performance of different servers
+	- This tool will allow users to weigh the pros and cons of each server
+	  archetype and make an informed decision on which one to use for
+	  their program
+
+Staff:
+	- Lead Programmer : Joon Kang
+	- Technical Director : Samil Chai
+
+Goals: 
+	- Test the performance between the C++ Synchronous, C++ Asynchronous,
+	  JavaServlet, and Node.js servers
+	- Test the performance between Oracle Database and MySQL Database
+	- Create multiple tests to simulate different environment
+		- For example...
+		- Gaming
+			- Real Time
+			- Turn-based
+		- Chatting
+		- Downloading
+		- Simple Websites
+		- Video/Music Streaming
+		- Transactions
+	- Create visual 
+
+Important Decisions:
+	- The original plan was to test the C++ server in three different 
+	  environments: Non-Binding Socket, Linux EPOLL, and Windows IOCP
+		- We will not be using Windows IOCP 
+	- Create two separate Ubuntu virtual machines
+		- One is for the server itself and one is for the database
+
+Current Progress:
+- Establish a connection between client and server
+	- Separate get and post requests (JavaServlet and Node.js)
+	- Establish a secured connection between client and server
+		- C++ and client use OpenSSL to encrypt and decrypt messages
+		- JavaServlet and Node.js use HTTPS to encrypt and decrypt message
+	- Handle multiple requests at once	
+		- C++ use multiple threads
+		- JavaServlet and Node.js by default are multithreaded 
+	- Send message in json format
+	- Implement chat server scenario in all servers
+	- Implement video streaming server scenario in all servers except node.js
+	- Analyze and display data on client side	
+		- Total time taken
+		- Bitrate

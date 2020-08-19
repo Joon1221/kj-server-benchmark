@@ -1,0 +1,53 @@
+================================================================================
+How to run program
+================================================================================
+Server:
+	- There are currently four different servers that can be run.
+	- All of them are located at kj_server_benchmark/server, however it will
+	  shortened to "base_folder" to shorten the text.
+	- Choose one of the servers out of the four that you want to test.
+	
+C++ Asynchronous Server:
+	- *Note* This server can only be run on a linux based operating system.
+	- Open the terminal and change directories to base_folder/c++
+		- cd base_folder/c++
+	- Compile and run the server
+		- make async
+	- Stop the server
+		- Ctrl + C
+
+C++ Synchronous Server:
+	- Open the terminal and change directories to base_folder/c++
+		- cd base_folder/c++
+	- Compile and run the server
+		- make sync
+	- Stop the server
+		- Ctrl + C
+
+Java Servlet Server:
+	- *Note* Unlike the others, this server does not have a command line.
+	- Open the terminal and change directories to base_folder/javaservlet
+		- cd base_folder/javaservlet
+	- Compile and run the server
+		- make
+	- Stop the server
+		- make stop
+
+Node.js Server:
+	- Open the terminal and change directories to base_folder/node.js
+		- cd base_folder/node.js
+	- Compile and run the server
+		- make
+	- Stop the server
+		- Ctrl + C
+
+Client: 
+	- *Note* As of now, the client can only be run on Xcode. It means that 
+	  it has to be run on MacOS.
+	- Locate and open 2019_summer_project_client.xcodeproj. It should be 
+	  located at kj_server_benchmark/client/client
+	- At the top of main.cpp, set the static variable IP_ADDRESS to the
+	  address of the server
+	- Change the ports accordinigly
+	- Build and run the client
+		- ⌘ + R
