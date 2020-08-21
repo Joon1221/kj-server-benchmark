@@ -80,7 +80,7 @@ void handleRequest(int fd, char msgFromClient[]) {
     printf("Message Received from %d\n", fd);
     
     //------------------------------------------------------
-    // Decrypt Message
+    // Decrypt Packet
     //------------------------------------------------------
     int requestType;    // Decrypted message
     char *err;               // Buffer for any error messages
@@ -94,7 +94,11 @@ void handleRequest(int fd, char msgFromClient[]) {
         printf("Request Type: %d\n", requestType);
     }
     
-//    printf("Request Type: %d\n", requestType);
+    //------------------------------------------------------
+    // Process Requeset
+    //------------------------------------------------------
+    
+    // process the request from client according to request type
     
     if (requestType == VIDEO_REQUEST) {
 //        printf("Video Request\n");
@@ -107,6 +111,8 @@ void handleRequest(int fd, char msgFromClient[]) {
 }
 
 //==============================================================================
+// videoStreamingPacket
+//==============================================================================
 // uint8_t       type;
 // uint8_t       body_length[3]; /* lenght of the body */
 // uint8_t       stream_id[3]; /* reserved, must be "\0\0\0" */
@@ -116,6 +122,7 @@ void handleRequest(int fd, char msgFromClient[]) {
 void sendVideo(int fd) {
     int count = 0;
 
+    // Open sample video
     FILE *fp;
     fp = fopen("../shared/1280x720.mp4", "rb");
     
@@ -127,6 +134,7 @@ void sendVideo(int fd) {
     
     videoStreamingPacket packet;
 
+    // Read initial 192 bytes of the sample video
     int numCharRead = fread(&packet.body, 1, 192, fp);
     
     while (true) {
@@ -135,13 +143,16 @@ void sendVideo(int fd) {
             break;
         }
         
+        //------------------------------------------------------------------
+        // Intialize Packet
+        //------------------------------------------------------------------
         packet.type = 0x12; // use static value
         packet.stream_id[0] = 0x12345678; // use static value
         packet.body_length[0] = 192;
         numCharRead = fread(&packet.body, 1, 192, fp);
     
         //------------------------------------------------------------------
-        // Encrypt Message
+        // Encrypt Packte
         //------------------------------------------------------------------
         char msgEncrypted[256];    // Encrypted message
         
@@ -160,7 +171,7 @@ void sendVideo(int fd) {
 //        printf("Encrypted message: %s\n", msgEncrypted);
         
         //------------------------------------------------------
-        // Send Message
+        // Send Packet
         //------------------------------------------------------
 //        size_t error = write(fd, &msgEncrypted, 1);
 
@@ -173,10 +184,14 @@ void sendVideo(int fd) {
         }
         count++;
 //        printf("Fd: %d Count: %d\n", fd, count);
-        }
+    }
     
-//    videoStreamingPacket packet;
+    /* Note that the loop above only handles cases when the full 192 bytes are
+       read. The code below is to send the remaining sample video data */
     
+    //------------------------------------------------------------------
+    // Intialize Packet
+    //------------------------------------------------------------------
     packet.type = 0x12; // use static value
     packet.stream_id[0] = 0x12345678; // use static value
     packet.body_length[0] = numCharRead;
@@ -184,7 +199,7 @@ void sendVideo(int fd) {
     fread(&packet.body, 1, numCharRead, fp); // read the remaining data
     
     //------------------------------------------------------------------
-    // Encrypt Message
+    // Encrypt Packet
     //------------------------------------------------------------------
     char msgEncrypted[256];    // Encrypted message
     
@@ -208,7 +223,8 @@ void sendVideo(int fd) {
     write(fd, &msgEncrypted, 256);
     fclose(fp);
 }
-
+//==============================================================================
+// chatPacket
 //==============================================================================
 // uint8_t       header;
 // uint8_t       body_length[3]; /* lenght of the body */
@@ -217,6 +233,8 @@ void sendVideo(int fd) {
 //==============================================================================
 
 void sendChatMsg(int fd) {
+    
+    // Open sample text file
     FILE *fp;
     fp = fopen("../shared/chat_message.txt", "rb");
     
@@ -226,6 +244,9 @@ void sendChatMsg(int fd) {
         exit(1);
     }
     
+    //------------------------------------------------------------------
+    // Initialize Chat Packet
+    //------------------------------------------------------------------
     chatPacket packet;
 
     packet.header = 0x12; // use static value
@@ -239,7 +260,7 @@ void sendChatMsg(int fd) {
 //    int randSize = rand() % 192;
     
     //------------------------------------------------------------------
-    // Encrypt Message
+    // Encrypt Packet
     //------------------------------------------------------------------
     char msgEncrypted[256];    // Encrypted message
     
@@ -255,9 +276,9 @@ void sendChatMsg(int fd) {
 //            printf("Encrypted message: %s\n", msgEncrypted);
     
     //------------------------------------------------------
-    // Send Message
+    // Send Packet
     //------------------------------------------------------
-    //        size_t error = write(fd, &msgEncrypted, 1);
+//        size_t error = write(fd, &msgEncrypted, 1);
     
     size_t error = write(fd, &msgEncrypted, 256);
     if (error < 0) {
@@ -265,12 +286,15 @@ void sendChatMsg(int fd) {
         perror("write");
         exit(1);
     }
+    
+    // Close sample text file
     fclose(fp);
 }
 
 int main() {
-//    sendVideo(1);
-    
+    //--------------------------------------------------------------------------
+    // Intialize Server
+    //--------------------------------------------------------------------------
     int server_sockfd, client_sockfd;
     int server_len, client_len;
     struct sockaddr_in server_address;
@@ -351,7 +375,7 @@ int main() {
                     }
                     else {
                         //------------------------------------------------------
-                        // Receive Message
+                        // Receive Packet
                         //------------------------------------------------------
                         char msgFromClient[256];
                         read(fd, msgFromClient, 256);
@@ -359,8 +383,9 @@ int main() {
 //                        printf("charFromClient is %s\n", msgFromClient);
 
                         //------------------------------------------------------
-                        // Create new thread to proceess request
+                        // Create new thread
                         //------------------------------------------------------
+                        // a new thread is created to process request
                         std::thread{handleRequest, fd, msgFromClient}.detach();
                     }
                 }
