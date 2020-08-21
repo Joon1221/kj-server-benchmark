@@ -44,8 +44,7 @@ RequestSenderHTTP::RequestSenderHTTP(string ip_address, string port, string exte
 
 // thread function
 bool RequestSenderHTTP::sendRequest(int id) {
-    while (!startSendingRequest) {
-    }
+    while (!startSendingRequest) {} // Used to stall threads so they start simultaneously
 
 
     CURL *curl;
@@ -54,8 +53,9 @@ bool RequestSenderHTTP::sendRequest(int id) {
     /* get a curl handle */
     curl = curl_easy_init();
     if(curl) {
-        
+        // ---------------------------------------------------------------------
         // create json object
+        // ---------------------------------------------------------------------
         Json::Value value(Json::objectValue);
         value["name"] = "TestName";
         stringstream convert;
@@ -68,7 +68,11 @@ bool RequestSenderHTTP::sendRequest(int id) {
 
         char *jsonObj = (char *)output.c_str();
 
+        
+        // ---------------------------------------------------------------------
         // create http packet
+        // ---------------------------------------------------------------------
+
         struct curl_slist *headers = NULL;
         headers = curl_slist_append(headers, "Accept: application/json");
         headers = curl_slist_append(headers, "Content-Type: application/json");
@@ -87,6 +91,9 @@ bool RequestSenderHTTP::sendRequest(int id) {
 //                curl_easy_setopt(curl, CURLOPT_NOBODY, 1);
         
 //                curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
+        // ---------------------------------------------------------------------
+        // send http packet
+        // ---------------------------------------------------------------------
 
         res = curl_easy_perform(curl);
 
@@ -108,18 +115,22 @@ bool RequestSenderHTTP::sendMultipleRequests(int numSimultaneousRequests, int id
     numFulfilledRequests = 0;
 
     for (int i = 0; i < numSimultaneousRequests; i++) {
+        // create new thread
         std::thread {&RequestSenderHTTP::sendRequest, this, id}.detach();
     }
 
-    startSendingRequest = true;
-
+    usleep(2000000); // gives time for all threads to be ready
+    startSendingRequest = true; // signal to start all thread simultaneously
 
     Timer *timer = new Timer();
     timer->startTimer();
+    
     while (numFulfilledRequests < numSimultaneousRequests) { }
+    
     timer->stopTimer();
     timer->displayTime();
     
+    // display results
     if (id == VIDEO_REQUEST) {
         cout << "Bitrate: Not implemented yet" << endl;
     }

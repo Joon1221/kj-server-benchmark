@@ -26,28 +26,6 @@ using namespace std;
 #define IP_ADDRESS "192.168.1.76"
 
 int main() {
-//    int serverType = SERVER_CPLUSPLUS;
-////    int serverType = SERVER_JAVASERVLET;
-////    int serverType = SERVER_NODEJS;
-//
-//    if (serverType == SERVER_CPLUSPLUS) {
-////        RequestSenderBinary *requestSender = new RequestSenderBinary("127.0.0.1");
-//        RequestSenderBinary *requestSender = new RequestSenderBinary("192.168.1.76");
-//        requestSender->sendMultipleRequests(500, CHAT_REQUEST);
-//    }
-//    else if (serverType == SERVER_JAVASERVLET) {
-////        RequestSenderHTTP *requestSender = new RequestSenderHTTP("http://127.0.0.1:8080/server");
-//        RequestSenderHTTP *requestSender = new RequestSenderHTTP("https://127.0.0.1:8443/server");
-////        RequestSenderHTTP *requestSender = new RequestSenderHTTP("https://192.168.1.73:8443/server");
-//        requestSender->sendMultipleRequests(500, VIDEO_REQUEST);
-//    }
-//    else if (serverType == SERVER_NODEJS) {
-//        RequestSenderHTTP *requestSender = new RequestSenderHTTP("https://127.0.0.1:8443");
-////        RequestSenderHTTP *requestSender = new RequestSenderHTTP("https://192.168.1.73:8443");
-//        requestSender->sendMultipleRequests(500, VIDEO_REQUEST);
-//    }
-
-//        RequestSenderBinary *requestSender = new RequestSenderBinary("127.0.0.1");
     
     int numChatRequests = 0;
     int numVideoRequests = 0;

@@ -91,7 +91,7 @@ bool RequestSenderBinary::sendRequest(int id) {
     
     while (!startSendingRequest) { } // Used to stall threads so they start simultaneously
     //------------------------------------------------------------------
-    // Encrypt Message
+    // Encrypt Packet
     //------------------------------------------------------------------
     int msg = id;  // Message to encrypt
     char msgEncrypted[256];    // Encrypted message
@@ -107,12 +107,12 @@ bool RequestSenderBinary::sendRequest(int id) {
     }
 
     //------------------------------------------------------------------
-    // Send Message
+    // Send Packet
     //------------------------------------------------------------------
     write(sockfd, msgEncrypted, 256);
 
     //------------------------------------------------------------------
-    // Receive Message
+    // Receive Packet
     //------------------------------------------------------------------
     if (id == VIDEO_REQUEST) {
         for (int i = 0; i < 164017; i++) {
@@ -123,24 +123,9 @@ bool RequestSenderBinary::sendRequest(int id) {
     else if (id == CHAT_REQUEST) {
         char textFromServer[256];
         int numBytesRead = read(sockfd, textFromServer, 256);
-//        char msgDecrypted[256];    // Decrypted message
-//
-//        // Decrypt it
-//        if(RSA_private_decrypt(256, (unsigned char*)textFromServer, (unsigned char*)msgDecrypted,
-//                               rsaDecrypt, RSA_PKCS1_OAEP_PADDING) == -1) {
-//            ERR_load_crypto_strings();
-//            ERR_error_string(ERR_get_error(), err);
-//            fprintf(stderr, "Error decrypting message: %s\n", err);
-//        }
-//        else {
-//            //        numFulfilledRequests++;
-//        }
-//        printf("Decrypted message: %s\n id: %d\n", msgDecrypted, id);
     }
     
-    //------------------------------------------------------------------
-    // Decrypt Message
-    //------------------------------------------------------------------
+
     numFulfilledRequests++;
 
     close(sockfd);
@@ -151,20 +136,23 @@ bool RequestSenderBinary::sendRequest(int id) {
 bool RequestSenderBinary::sendMultipleRequests(int numSimultaneousRequests, int id) {
     numFulfilledRequests = 0;
     for (int i = 0; i < numSimultaneousRequests; i++) {
+        // create new thread
         std::thread {&RequestSenderBinary::sendRequest, this, id}.detach();
     }
 
-    usleep(2000000);
-    startSendingRequest = true;
+    usleep(2000000); // gives time for all threads to be ready
+    startSendingRequest = true; // signal to start all thread simultaneously
    
+    // intialize timer
     Timer *timer = new Timer();
     timer->startTimer();
     
-    while (numFulfilledRequests < numSimultaneousRequests) {
-    }
+    while (numFulfilledRequests < numSimultaneousRequests) {}
+    
     timer->stopTimer();
     timer->displayTime();
     
+    // display results
     if (id == VIDEO_REQUEST) {
         cout << "Bitrate: " << 164017*256*8/timer->getTimeTaken() << " bps" << endl;
     }
