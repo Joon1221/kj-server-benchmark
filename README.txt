@@ -17,8 +17,8 @@ scenarios (Chat server and Streaming server).
 STAFF
 -----
 
-Lead Programmer : Joon Kang
-Technical Director : Samil Chai
+Programmer : Joon Kang
+Mentor : Samil Chai
 
 
 WORK PERIOD
