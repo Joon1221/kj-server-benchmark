@@ -8,10 +8,9 @@ INTRODUCTION
 
 kj_server_benchmark is a tool used to compare the performance of different 
 server set-ups. It tracks information such as bitrate and ping, which allows
-users to make a more informed decision on what server archetype to use for each 
-scenario. It currently runs tests on 4 different server types (C++ Asynchronous,
-C++ Synchronous, JavaServlet using Apache Tomcat, and Node.js) and 2 different 
-scenarios (Chat server and Streaming server).
+users to make a more informed decision on what server archetype to use for  
+different scenarios. It currently runs tests on 4 different server types (C++ Asynchronous, C++ Synchronous, JavaServlet using Apache Tomcat, and Node.js) 
+and 2 different scenarios (Chat server and Streaming server).
 
 
 STAFF
