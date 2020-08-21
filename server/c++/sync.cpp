@@ -1,3 +1,8 @@
+//==============================================================================
+// Source: https://classes.cs.uchicago.edu/archive/2017/winter/51081-1/labs/CODE
+//         /BeginningLinuxProgramming/chapter14/server5.c
+//==============================================================================
+
 /*  For our final example, server5.c,
  we include the sys/time.h and sys/ioctl.h headers in place of signal.h
  in our last program and declare some extra variables to deal with select.  */
