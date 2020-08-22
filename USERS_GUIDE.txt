@@ -228,6 +228,7 @@ Client:
 		- Replace all instances of 127.0.0.1 with the desired ip address
 	- Build and run the client
 		- ⌘ + R
+	- Input values for number of simultaneous connections when prompted to 
 
 ================================================================================
 Result
