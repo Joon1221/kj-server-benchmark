@@ -243,10 +243,10 @@ Close Xcode project.
 
 Under `kj_server_benchmark/server/c++/makefile` update OpenSSL header and library path to the correct version.
 ```
-- Change -I"../../api/openssl-1.1.1c/include" to -I"../../api/openssl-X.X.Xx/include"
+Change -I"../../api/openssl-1.1.1c/include" to -I"../../api/openssl-X.X.Xx/include"
 
 
-- Change -I"../../api/openssl-1.1.1c" to -I"../../api/openssl-X.X.Xx"
+Change -I"../../api/openssl-1.1.1c" to -I"../../api/openssl-X.X.Xx"
 ```
 
 #### Tomcat
