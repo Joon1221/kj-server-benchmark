@@ -8,7 +8,6 @@ archetype to use for different scenarios.
 <p align="left">
   <img src="./assets/demoIntro.png" alt="Size Limit CLI" width="600">
 </p>
-
 Features
 --------
 
