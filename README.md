@@ -276,41 +276,39 @@ Usage
 
 <br>
 
-C++ Asynchronous Server
+**C++ Asynchronous**
 ```
 cd kj_server_benchmark/server/c++
 ```
 - Compile and run the server: `make async`
 - Stop the server: `Ctrl + C`
 
-C++ Synchronous Server
+**C++ Synchronous**
 ```
 cd kj_server_benchmark/server/c++
 ```
 - Compile and run the server: `make sync`
 - Stop the server: `Ctrl + C`
 
-Java Servlet Server
+**Java Servlet**
 ```
 cd kj_server_benchmark/server/javaservlet
 ```
 - Compile and run the server: `make`
 - Stop the server: `make stop`
 
-Node.js Server
+**Node.js**
 ```
 cd kj_server_benchmark/server/node.js
 ```
 - Compile and run the server: `make`
 - Stop the server: `Ctrl + C`
-	
 
-<br>
 
 ### Run the Program
-Build and run client using **Xcode**: `⌘ + R`
+- Build and run client using **Xcode**: `⌘ + R`
 
-Input value for IP address and number of simultaneous connections.
+- Input value for IP address and number of simultaneous connections.
 
 <p align="center">
   <img src="./assets/demo.png" alt="Size Limit CLI" width="600">
