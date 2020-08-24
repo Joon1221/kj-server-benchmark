@@ -19,7 +19,7 @@ Features
 Installation
 ------------
 
-## Step 1: Install and Set Up Ubuntu Server as a Virtual Machine
+### Step 1: Install and Set Up Ubuntu Server as a Virtual Machine
 - Download VirtualBox (6.0.8)
 	- https://www.virtualbox.org/wiki/Downloads
 - Download Ubuntu Server (18.04.2 LTS)
@@ -38,11 +38,7 @@ Installation
 - Start the device and follow the instructions to initialize the system
 - Enter Settings -> Storage once again and eject the startup disk
 
-## Step 2: Install Source Code
-
-- Download and unzip source code from the repository
-
-## Step 3: Download Necessary APIs
+### Step 2: Download Necessary APIs
 - The APIs will be separated into three sections, one for each language.
 - C++:
 	- Download cmake to install libraries
@@ -123,7 +119,7 @@ Installation
 		- npm install express@">=3.0.0 <4.0.0" --save
 
 
-## Step 4: Update Header and Library Search Paths (Optional)
+### Step 3: Update Header and Library Search Paths (Optional)
 *Note* If all the steps above are done exactly as stated, with all api 
 downloaded to the same version, this step can be skipped. The steps will be 
 separated for each library.
