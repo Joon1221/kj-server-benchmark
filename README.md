@@ -6,7 +6,7 @@ server set-ups so users can make a more informed decisions on what server
 archetype to use for different scenarios. 
 
 <p align="left">
-  <img src="./assets/demoIMG.png" alt="Size Limit CLI" width="600">
+  <img src="./assets/intro.png" alt="Size Limit CLI" width="600">
 </p>
 
 Features
