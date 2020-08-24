@@ -59,7 +59,7 @@ Enter `Settings -> Storage` once again and eject the startup disk.
 
 <br>
 
-Download cmake to install libraries.
+Download CMake.
 
 - MacOS:
 	``` Shell
@@ -76,7 +76,7 @@ Download cmake to install libraries.
 	sudo apt install cmake
 	```	 
 
-Download and extract jsoncpp (1.8.0): https://github.com/open-source-parsers/jsoncpp
+Download and extract Jsoncpp (1.8.0): https://github.com/open-source-parsers/jsoncpp
 
 ``` Shell
 cd kj_server_benchmark/api/jsoncpp-master
@@ -94,7 +94,7 @@ cmake -DCMAKE_BUILD_TYPE=debug -DBUILD_STATIC_LIBS=ON -DBUILD_SHARED_LIBS=OFF -D
 make
 ```
 
-Download and extract openssl (1.1.1c): https://www.openssl.org/source/
+Download and extract OpenSSL (1.1.1c): https://www.openssl.org/source/
 
 - MacOS:
 	``` Shell
@@ -124,7 +124,7 @@ Download and extract openssl (1.1.1c): https://www.openssl.org/source/
 	*Make sure to replace ... with the location of the project.*
 
 
-Download and extract curl (7.65.1): https://curl.haxx.se/download.html
+Download and extract Curl (7.65.1): https://curl.haxx.se/download.html
 
 ``` Shell
 ./configure --prefix=/usr/local/curl
@@ -135,7 +135,7 @@ make
 
 sudo make install
 ```
-### Step 2: Install C++ Prerequisites
+### Step 3: Install JavaServlet Prerequisites
 
 <br>
 
@@ -143,7 +143,7 @@ sudo make install
 
 <br>
 
-Download java. 
+Download Java. 
 ``` Shell
 apt-get install default-jdk
 
@@ -154,7 +154,7 @@ java -version
 nano ~/.bashrc
 ```
 
-Paste the following at the very bottom (*replace X with the java version found previously*)
+Paste the following at the very bottom (*replace X with the java version found previously*).
 
 ``` Shell
 export JAVA_HOME=/usr/lib/jvm/java-X-openjdk-amd64
@@ -172,10 +172,10 @@ keytool  -genkey -alias server-alias -keyalg RSA -keypass changeit -storepass ch
 nano server.xml
 ```
 
-Paste the following underneath `<Connector port="8080" ... redirectPort="8443" />`
+Paste the following underneath `<Connector port="8080" ... redirectPort="8443" />`.
 
 ``` XML
-- <Connector
+<Connector
 	protocol="HTTP/1.1"
 	port="8443" maxThreads="200"
 	scheme="https" secure="true" SSLEnabled="true"
@@ -183,7 +183,7 @@ Paste the following underneath `<Connector port="8080" ... redirectPort="8443" /
 	clinetAuth="false" sslProtocol="TLS" />
 ```
 
-Create folders for libraries and classes
+Create folders for libraries and classes.
 ``` Shell
 cd kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF
 
@@ -198,23 +198,28 @@ Download gson (2.8.5): https://search.maven.org/artifact/com.google.code.gson/gs
 
 <br>
 
-Move the .jar file to kj_server_benchmark/api/gson
+Move the file to `kj_server_benchmark/api/gson`.
 
 <br>
 
-Create a copy and move the copy to kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes
+Create a copy and move the copy to `kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes`.
 
 <br>
 
-Download web.xml from git repository and replace it with the web.xml located at kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF
+Download `web.xml` from git repository and replace it with the one at `kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/web.xml`.
 	
-#### Node.js:
+### Step 3: Install Node.js Prerequisites
+
+<br>
+
+Install Express.
+
 ``` Shell
 cd kj_server_benchmark/api
 npm install express@">=3.0.0 <4.0.0" --save
 ```
 
-### Step 3: Update Header and Library Search Paths (Optional)
+### Step 4: Update Header and Library Search Paths (Optional)
 *Note* If all the steps above are done exactly as stated, with all api 
 downloaded to the same version, this step can be skipped. The steps will be 
 separated for each library.
