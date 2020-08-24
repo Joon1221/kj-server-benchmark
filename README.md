@@ -53,21 +53,29 @@ Enter `Settings -> Storage` once again and eject the startup disk.
 
 ### Step 2: Install C++ Prerequisites
 
-*Move all downloaded files to `kj_server_benchmark/api`*
+*Move all downloaded files to `kj_server_benchmark/api`.*
+
+<br>
+
+Download cmake to install libraries.
+
+-MacOS:
+	``` Shell
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	```
+-Linux: 
+	``` Shell
+	sudo apt-get install linuxbrew-wrapper
 
 
-Download cmake to install libraries
+	sudo apt install cmake
+	```	 
 
-``` Shell
-MacOS: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-Linux: sudo apt-get install linuxbrew-wrapper
-	 sudo apt install cmake
-	 
-	 
-brew install cmake
-```
+	``` Shell
+	brew install cmake
+	```
 
-Download and extract jsoncpp (1.8.0): `https://github.com/open-source-parsers/jsoncpp`
+Download and extract jsoncpp (1.8.0): https://github.com/open-source-parsers/jsoncpp
 
 ``` Shell
 cd kj_server_benchmark/api/jsoncpp-master
@@ -87,8 +95,9 @@ make
 
 Download and extract openssl (1.1.1c): https://www.openssl.org/source/
 
-``` Shell
-MacOS:
+-MacOS:
+	``` Shell
+
 	cd kj_server_benchmark/api/openssl-1.1.1c
 	
 	
@@ -99,8 +108,10 @@ MacOS:
 	
 	
 	make test
+	```
 
-Linux:
+-Linux:
+	``` Shell
 	./config -–prefix=.../kj_server_benchmark/api/openssl-1.1.1c -–openssldir=.../kj_server_benchmark/api/openssl-1.1.1c
 	
 	
@@ -108,14 +119,16 @@ Linux:
 	
 	
 	sudo make install
-```
+	```
 *Make sure to replace ... with the location of the project.*
 
+<br>
 
 Download and extract curl (7.65.1)L: https://curl.haxx.se/download.html
 
 ``` Shell
 ./configure --prefix=/usr/local/curl
+
 
 make
 
