@@ -51,7 +51,6 @@ Start the device and follow the instructions to initialize the system.
 
 Enter `Settings -> Storage` once again and eject the startup disk.
 
-<br>
 
 ### Step 2: Install C++ Prerequisites
 
@@ -208,9 +207,8 @@ Create a copy and move the copy to `kj_server_benchmark/api/tomcat/apache-tomcat
 
 Download `web.xml` from git repository and replace it with the one at `kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/web.xml`.
 	
-### Step 3: Install Node.js Prerequisites
+### Step 4: Install Node.js Prerequisites
 
-<br>
 
 Install Express.
 
