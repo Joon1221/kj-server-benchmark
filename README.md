@@ -59,11 +59,11 @@ Enter `Settings -> Storage` once again and eject the startup disk.
 
 Download cmake to install libraries.
 
--MacOS:
+- MacOS:
 	``` Shell
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	```
--Linux: 
+- Linux: 
 	``` Shell
 	sudo apt-get install linuxbrew-wrapper
 
@@ -95,7 +95,7 @@ make
 
 Download and extract openssl (1.1.1c): https://www.openssl.org/source/
 
--MacOS:
+- MacOS:
 	``` Shell
 
 	cd kj_server_benchmark/api/openssl-1.1.1c
@@ -110,7 +110,7 @@ Download and extract openssl (1.1.1c): https://www.openssl.org/source/
 	make test
 	```
 
--Linux:
+- Linux:
 	``` Shell
 	./config -–prefix=.../kj_server_benchmark/api/openssl-1.1.1c -–openssldir=.../kj_server_benchmark/api/openssl-1.1.1c
 	
