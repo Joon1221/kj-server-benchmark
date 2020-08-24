@@ -310,18 +310,18 @@ cd kj_server_benchmark/server/node.js
 
 - Input value for IP address and number of simultaneous connections.
 
-<p align="center">
+<p align="left">
   <img src="./assets/demo.gif" alt="Size Limit CLI" width="600">
 </p>
 
 Libraries
 ---------
 
-- curl 7.65.1
-- gson 2.8.5
-- jsoncpp 1.8.0
-- openssl 1.1.1c
-- node modules 
+- Curl 7.65.1
+- Gson 2.8.5
+- Jsoncpp 1.8.0
+- OpenSSL 1.1.1c
+- Express
 
 
 Goals
