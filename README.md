@@ -228,32 +228,33 @@ Open `kj_server_benchmark/client/client2019_summer_project_client.xcodeproj`.
 
 <br>
 
-Under `Project Settings -> Build Settings -> Header Search Paths` update OpenSSL header path to the correct version
+Under `Project Settings -> Build Settings -> Header Search Paths` update OpenSSL header path to the correct version.
  ```
- ../../api/openssl-X.X.Xx/include 
+Change ../../api/openssl-1.1.1c/include to ../../api/openssl-X.X.Xx/include
  ```
-Under `Project Settings -> Build Settings -> Library Search Paths` update OpenSSL library path to the correct version
+Under `Project Settings -> Build Settings -> Library Search Paths` update OpenSSL library path to the correct version.
 ```
-../../api/openssl-X.X.Xx
+Change ../../api/openssl-1.1.1c to ../../api/openssl-X.X.Xx
 ```
 
 Close Xcode project.
 
+<br>
 
-Under `kj_server_benchmark/server/c++/makefile` update OpenSSL header and library path to the correct version
+Under `kj_server_benchmark/server/c++/makefile` update OpenSSL header and library path to the correct version.
 ```
--I"../../api/openssl-X.X.Xx/include"
+- Change -I"../../api/openssl-1.1.1c/include" to -I"../../api/openssl-X.X.Xx/include"
 
 
--L"../../openssl-X.X.Xx"
+- Change -I"../../api/openssl-1.1.1c" to -I"../../api/openssl-X.X.Xx"
 ```
 
 #### Tomcat
 
 
-Under `kj_server_benchmark/server/javaservlet/makefile` update all five instances of `apache-tomcat-9.0.21` to the correct version
+Under `kj_server_benchmark/server/javaservlet/makefile` update all five instances of `apache-tomcat-9.0.21` to the correct version.
 ```
-apache-tomcat-X.X.XX
+Change apache-tomcat-9.0.21 to apache-tomcat-X.X.XX
 ```
 
 #### Gson
