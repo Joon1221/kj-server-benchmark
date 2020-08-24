@@ -53,6 +53,8 @@ Enter `Settings -> Storage` once again and eject the startup disk.
 
 ### Step 2: Install C++ Prerequisites
 
+<br>
+
 *Move all downloaded files to `kj_server_benchmark/api`.*
 
 <br>
@@ -62,6 +64,9 @@ Download cmake to install libraries.
 - MacOS:
 	``` Shell
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	
+	
+	brew install cmake
 	```
 - Linux: 
 	``` Shell
@@ -70,10 +75,6 @@ Download cmake to install libraries.
 
 	sudo apt install cmake
 	```	 
-
-	``` Shell
-	brew install cmake
-	```
 
 Download and extract jsoncpp (1.8.0): https://github.com/open-source-parsers/jsoncpp
 
@@ -120,11 +121,11 @@ Download and extract openssl (1.1.1c): https://www.openssl.org/source/
 	
 	sudo make install
 	```
-*Make sure to replace ... with the location of the project.*
+	*Make sure to replace ... with the location of the project.*
 
 <br>
 
-Download and extract curl (7.65.1)L: https://curl.haxx.se/download.html
+Download and extract curl (7.65.1): https://curl.haxx.se/download.html
 
 ``` Shell
 ./configure --prefix=/usr/local/curl
