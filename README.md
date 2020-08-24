@@ -353,9 +353,7 @@ Design Decisions
 - The original plan was to test the C++ server in three different environments: 
   Non-Binding Socket, Linux EPOLL, and Windows IOCP
 	- We will not be using Windows IOCP 
-- Create two separate Ubuntu virtual machines
-	- One is for the server itself and one is for the database
-	
+
 	
 Staff
 -----
