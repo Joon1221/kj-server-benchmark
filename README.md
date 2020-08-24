@@ -22,9 +22,11 @@ Installation
 ### Step 1: Install and Set Up Ubuntu Server as a Virtual Machine
 Download VirtualBox (6.0.8): https://www.virtualbox.org/wiki/Downloads
 	
-	
+<br>	
+
 Download Ubuntu Server (18.04.2 LTS): https://ubuntu.com/download/server
 
+<br>	
 
 Turn on Virtual Box and create new virtual machine (*Note that specifications do not need to be identical*)
 
@@ -35,55 +37,91 @@ Type: Linux
 Version: Ubuntu (64-bit)
 ```
 
-Set bootable device to the downloaded Ubuntu iso file
+Set bootable device to the downloaded Ubuntu iso file.
 - Enter `Settings -> Storage`
-- Click on the empty disk under "Controller: IDE"
-- Next to "Optical Drive:", click on the disk icon, and select
-	  the downloaded iso file
-	  
-	  
-Start the device and follow the instructions to initialize the system
+- Click on the empty disk under *`Controller: IDE`.
+- Next to `Optical Drive:`, click on the disk icon, and select
+	  the downloaded iso file.
 
+<br>		  
+	  
+Start the device and follow the instructions to initialize the system.
 
-Enter `Settings -> Storage` once again and eject the startup disk
+<br>	
+
+Enter `Settings -> Storage` once again and eject the startup disk.
 
 ### Step 2: Install C++ Prerequisites
-	- Download cmake to install libraries
-		- Open terminal and paste the following
-		- MacOS: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-		- Linux: sudo apt-get install linuxbrew-wrapper
-			 sudo apt install cmake
-		- brew install cmake
-	- Download and extract jsoncpp (1.8.0)
-		- https://github.com/open-source-parsers/jsoncpp
-	- Open terminal and paste the following	
-		- Move the folder into kj_server_benchmark/api
-		- cd kj_server_benchmark/api/jsoncpp-master
-		- mkdir -p build/debug
-		- cd build/debug
-		- cmake -DCMAKE_BUILD_TYPE=debug -DBUILD_STATIC_LIBS=ON -DBUILD_SHARED_LIBS=OFF -DARCHIVE_INSTALL_DIR=. -G "Unix Makefiles" ../..
-		- make
-	- Download and extract openssl (1.1.1c)
-		- https://www.openssl.org/source/
-	- Move the folder into kj_server_benchmark/api
-	- Open terminal and paste the following
-		- MacOS:
-			- cd kj_server_benchmark/api/openssl-1.1.1c
-			- ./Configure darwin64-x86_64-cc --openssldir=/usr/local/ssl
-			- make
-			- make test
-		- Linux:
-			./config -–prefix=.../kj_server_benchmark/api/openssl-1.1.1c -–openssldir=.../kj_server_benchmark/api/openssl-1.1.1c
-			- make -j8
-			- sudo make install
-			- *Note* Make sure to replace ... with the location of the project
-	- Download and extract curl (7.65.1)
-		- https://curl.haxx.se/download.html
-	- Move the folder into kj_server_benchmark/api
-	- Open terminal and paste the following
-		- ./configure --prefix=/usr/local/curl
-		- make
-		- sudo make install
+
+*Move all downloaded files to `kj_server_benchmark/api`*
+
+
+Download cmake to install libraries
+
+``` Shell
+MacOS: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+Linux: sudo apt-get install linuxbrew-wrapper
+	 sudo apt install cmake
+	 
+	 
+brew install cmake
+```
+
+Download and extract jsoncpp (1.8.0): `https://github.com/open-source-parsers/jsoncpp`
+
+``` Shell
+cd kj_server_benchmark/api/jsoncpp-master
+
+
+mkdir -p build/debug 
+
+
+cd build/debug
+
+
+cmake -DCMAKE_BUILD_TYPE=debug -DBUILD_STATIC_LIBS=ON -DBUILD_SHARED_LIBS=OFF -DARCHIVE_INSTALL_DIR=. -G "Unix Makefiles" ../..
+
+
+make
+```
+
+Download and extract openssl (1.1.1c): https://www.openssl.org/source/
+
+``` Shell
+MacOS:
+	cd kj_server_benchmark/api/openssl-1.1.1c
+	
+	
+	./Configure darwin64-x86_64-cc --openssldir=/usr/local/ssl
+	
+	
+	make
+	
+	
+	make test
+
+Linux:
+	./config -–prefix=.../kj_server_benchmark/api/openssl-1.1.1c -–openssldir=.../kj_server_benchmark/api/openssl-1.1.1c
+	
+	
+	make -j8
+	
+	
+	sudo make install
+```
+*Make sure to replace ... with the location of the project.*
+
+
+Download and extract curl (7.65.1)L: https://curl.haxx.se/download.html
+
+``` Shell
+./configure --prefix=/usr/local/curl
+
+make
+
+
+sudo make install
+```
 #### Java
 	- Download java. Open terminal and paste the following
 		- apt-get install default-jdk
@@ -177,27 +215,17 @@ Libraries
 - node modules 
 
 
-Multiple Connections
---------------------
-
-Since servers handle workload from multiple connections at once, threads are used
-on the client side to simulate multiple connections happening simultaneously. 
-The number of threads can be changed to simulate different levels of server stress,
-which can be helpful to determine which server archetypes are better at handling
-stress than others.
-
-
 Goals
 -----
 
-Test the performance between the C++ Synchronous, C++ Asynchronous, JavaServlet,
+-Test the performance between the C++ Synchronous, C++ Asynchronous, JavaServlet,
   and Node.js servers
   
   
-Test the performance between Oracle Database and MySQL Database
+-Test the performance between Oracle Database and MySQL Database
 
 
-Create multiple tests to simulate different environment
+-Create multiple tests to simulate different environment
 	- Gaming
 		- Real Time
 		- Turn-based
