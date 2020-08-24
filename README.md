@@ -1,48 +1,19 @@
-================================================================================
-                               kj_server_benchmark                                                       
-================================================================================
+#KJ Server Benchmark
 
-
-INTRODUCTION
-------------
 
 kj_server_benchmark is a tool used to compare the performance of different 
-server set-ups. It tracks information such as bitrate and ping, which allows
+server set-ups. 
+
+Features
+--------
+
+It tracks information such as bitrate and ping, which allows
 users to make a more informed decision on what server archetype to use for  
 different scenarios. It currently runs tests on 4 different server types (C++ Asynchronous, C++ Synchronous, JavaServlet using Apache Tomcat, and Node.js) 
 and 2 different scenarios (Chat server and Streaming server).
 
 
-STAFF
------
 
-Programmer : Joon Kang
-Mentor : Samil Chai
-
-
-WORK PERIOD
------------
-
-Start Date: 2019-07-02 
-End Date: 2019-09-06
-
-
-GOALS
------
-
-- Test the performance between the C++ Synchronous, C++ Asynchronous, JavaServlet,
-  and Node.js servers
-- Test the performance between Oracle Database and MySQL Database
-- Create multiple tests to simulate different environment
-	- Gaming
-		- Real Time
-		- Turn-based
-	- Chatting
-	- Downloading
-	- Simple Websites
-	- Video/Music Streaming
-	- Transactions
-- Visually represent the server performance 
 
 
 INSTALLATION
@@ -67,7 +38,7 @@ LIBRARIES
 - node modules 
 
 
-MULTIPLE CONNECTIONS
+Multiple Connections
 --------------------
 
 Since servers handle workload from multiple connections at once, threads are used
@@ -77,7 +48,29 @@ which can be helpful to determine which server archetypes are better at handling
 stress than others.
 
 
-DESIGN DECISIONS
+Goals
+-----
+
+Test the performance between the C++ Synchronous, C++ Asynchronous, JavaServlet,
+  and Node.js servers
+  
+  
+Test the performance between Oracle Database and MySQL Database
+
+
+Create multiple tests to simulate different environment
+	- Gaming
+		- Real Time
+		- Turn-based
+	- Chatting
+	- Downloading
+	- Simple Websites
+	- Video/Music Streaming
+	- Transactions
+Visually represent the server performance 
+
+
+Design Decisions
 ----------------
 
 - Encrypt messages using RSA algorithm and HTTPS to more closely resemble reality
@@ -86,6 +79,29 @@ DESIGN DECISIONS
 	- We will not be using Windows IOCP 
 - Create two separate Ubuntu virtual machines
 	- One is for the server itself and one is for the database
+	
+
+	
+Staff
+-----
+
+Programmer : Joon Kang
+
+
+Mentor : Samil Chai
+
+
+Work Period
+-----------
+
+Start Date: 2019-07-02 
+
+
+End Date: 2019-09-06
+
+
+
+
 
 
 
