@@ -1,0 +1,839 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A502448C22D6CE3400741B0A /* libcurl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A502448B22D6CE3400741B0A /* libcurl.dylib */; };
+		A502448D22D6CE3D00741B0A /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A502448922D6CE2400741B0A /* libcurl.a */; };
+		A572372F22CF18C8003870E9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A572372E22CF18C8003870E9 /* main.cpp */; };
+		A58966D422EF92B300D3B2C8 /* libjsoncpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A58966D322EF92B300D3B2C8 /* libjsoncpp.a */; };
+		A5CD6C4222F4C73600B128A0 /* request_sender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6C4022F4C73600B128A0 /* request_sender.cpp */; };
+		A5CD6C4522F4D3CE00B128A0 /* request_sender_binary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6C4322F4D3CE00B128A0 /* request_sender_binary.cpp */; };
+		A5CD6C4822F4D47900B128A0 /* request_sender_http.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6C4622F4D47900B128A0 /* request_sender_http.cpp */; };
+		A5CD6C4B22F7EA6300B128A0 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5CD6C4922F7EA6300B128A0 /* timer.cpp */; };
+		A5E29AC122DFDB8100A00DDB /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E29ABD22DFDB8100A00DDB /* libcrypto.dylib */; };
+		A5E29AC222DFDB8100A00DDB /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E29ABE22DFDB8100A00DDB /* libssl.a */; };
+		A5E29AC322DFDB8100A00DDB /* libssl.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E29ABF22DFDB8100A00DDB /* libssl.dylib */; };
+		A5E29AC422DFDB8100A00DDB /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5E29AC022DFDB8100A00DDB /* libcrypto.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A572372922CF18C8003870E9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A50242AF22D6B52400741B0A /* libcurl_la-progress.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-progress.o"; path = "../../curl-7.65.1/lib/libcurl_la-progress.o"; sourceTree = "<group>"; };
+		A50242B022D6B52400741B0A /* libcurl_la-curl_memrchr.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_memrchr.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_memrchr.o"; sourceTree = "<group>"; };
+		A50242B122D6B52400741B0A /* libcurl_la-socks.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-socks.o"; path = "../../curl-7.65.1/lib/libcurl_la-socks.o"; sourceTree = "<group>"; };
+		A50242B222D6B52400741B0A /* libcurl_la-hostcheck.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-hostcheck.o"; path = "../../curl-7.65.1/lib/libcurl_la-hostcheck.o"; sourceTree = "<group>"; };
+		A50242B322D6B52400741B0A /* libcurl_la-curl_ctype.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_ctype.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_ctype.o"; sourceTree = "<group>"; };
+		A50242B422D6B52400741B0A /* libcurl_la-parsedate.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-parsedate.o"; path = "../../curl-7.65.1/lib/libcurl_la-parsedate.o"; sourceTree = "<group>"; };
+		A50242B522D6B52400741B0A /* libcurl_la-curl_sspi.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_sspi.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_sspi.o"; sourceTree = "<group>"; };
+		A50242B622D6B52400741B0A /* libcurl_la-version.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-version.o"; path = "../../curl-7.65.1/lib/libcurl_la-version.o"; sourceTree = "<group>"; };
+		A50242B722D6B52400741B0A /* libcurl_la-ldap.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-ldap.o"; path = "../../curl-7.65.1/lib/libcurl_la-ldap.o"; sourceTree = "<group>"; };
+		A50242B822D6B52400741B0A /* libcurl_la-md5.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-md5.o"; path = "../../curl-7.65.1/lib/libcurl_la-md5.o"; sourceTree = "<group>"; };
+		A50242B922D6B52400741B0A /* libcurl_la-curl_gssapi.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_gssapi.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_gssapi.o"; sourceTree = "<group>"; };
+		A50242BA22D6B52400741B0A /* libcurl_la-non-ascii.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-non-ascii.o"; path = "../../curl-7.65.1/lib/libcurl_la-non-ascii.o"; sourceTree = "<group>"; };
+		A50242BB22D6B52400741B0A /* libcurl_la-base64.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-base64.o"; path = "../../curl-7.65.1/lib/libcurl_la-base64.o"; sourceTree = "<group>"; };
+		A50242BC22D6B52400741B0A /* libcurl_la-curl_multibyte.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_multibyte.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_multibyte.o"; sourceTree = "<group>"; };
+		A50242BD22D6B52400741B0A /* libcurl_la-warnless.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-warnless.o"; path = "../../curl-7.65.1/lib/libcurl_la-warnless.o"; sourceTree = "<group>"; };
+		A50242BE22D6B52400741B0A /* libcurl_la-altsvc.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-altsvc.o"; path = "../../curl-7.65.1/lib/libcurl_la-altsvc.o"; sourceTree = "<group>"; };
+		A50242BF22D6B52400741B0A /* libcurl_la-strdup.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-strdup.o"; path = "../../curl-7.65.1/lib/libcurl_la-strdup.o"; sourceTree = "<group>"; };
+		A50242C022D6B52400741B0A /* libcurl_la-timeval.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-timeval.o"; path = "../../curl-7.65.1/lib/libcurl_la-timeval.o"; sourceTree = "<group>"; };
+		A50242C122D6B52400741B0A /* libcurl_la-curl_ntlm_core.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_ntlm_core.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_ntlm_core.o"; sourceTree = "<group>"; };
+		A50242C222D6B52400741B0A /* libcurl_la-inet_pton.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-inet_pton.o"; path = "../../curl-7.65.1/lib/libcurl_la-inet_pton.o"; sourceTree = "<group>"; };
+		A50242C322D6B52400741B0A /* libcurl_la-rand.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-rand.o"; path = "../../curl-7.65.1/lib/libcurl_la-rand.o"; sourceTree = "<group>"; };
+		A50242C422D6B52400741B0A /* libcurl_la-hostip.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-hostip.o"; path = "../../curl-7.65.1/lib/libcurl_la-hostip.o"; sourceTree = "<group>"; };
+		A50242C522D6B52400741B0A /* libcurl_la-curl_get_line.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_get_line.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_get_line.o"; sourceTree = "<group>"; };
+		A50242C622D6B52400741B0A /* libcurl_la-psl.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-psl.o"; path = "../../curl-7.65.1/lib/libcurl_la-psl.o"; sourceTree = "<group>"; };
+		A50242C722D6B52400741B0A /* libcurl_la-ftplistparser.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-ftplistparser.o"; path = "../../curl-7.65.1/lib/libcurl_la-ftplistparser.o"; sourceTree = "<group>"; };
+		A50242C822D6B52400741B0A /* libcurl_la-wildcard.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-wildcard.o"; path = "../../curl-7.65.1/lib/libcurl_la-wildcard.o"; sourceTree = "<group>"; };
+		A50242C922D6B52400741B0A /* libcurl_la-x509asn1.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-x509asn1.o"; path = "../../curl-7.65.1/lib/libcurl_la-x509asn1.o"; sourceTree = "<group>"; };
+		A50242CA22D6B52400741B0A /* libcurl_la-amigaos.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-amigaos.o"; path = "../../curl-7.65.1/lib/libcurl_la-amigaos.o"; sourceTree = "<group>"; };
+		A50242CB22D6B52400741B0A /* libcurl_la-speedcheck.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-speedcheck.o"; path = "../../curl-7.65.1/lib/libcurl_la-speedcheck.o"; sourceTree = "<group>"; };
+		A50242CC22D6B52400741B0A /* libcurl_la-strcase.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-strcase.o"; path = "../../curl-7.65.1/lib/libcurl_la-strcase.o"; sourceTree = "<group>"; };
+		A50242CD22D6B52400741B0A /* libcurl_la-socks_gssapi.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-socks_gssapi.o"; path = "../../curl-7.65.1/lib/libcurl_la-socks_gssapi.o"; sourceTree = "<group>"; };
+		A50242CE22D6B52400741B0A /* libcurl_la-tftp.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-tftp.o"; path = "../../curl-7.65.1/lib/libcurl_la-tftp.o"; sourceTree = "<group>"; };
+		A50242CF22D6B52400741B0A /* curl-nonblock.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "curl-nonblock.o"; path = "../../curl-7.65.1/lib/curl-nonblock.o"; sourceTree = "<group>"; };
+		A50242D022D6B52400741B0A /* libcurl_la-http_digest.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-http_digest.o"; path = "../../curl-7.65.1/lib/libcurl_la-http_digest.o"; sourceTree = "<group>"; };
+		A50242D122D6B52400741B0A /* libcurl_la-curl_path.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_path.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_path.o"; sourceTree = "<group>"; };
+		A50242D222D6B52400741B0A /* libcurl_la-curl_endian.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_endian.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_endian.o"; sourceTree = "<group>"; };
+		A50242D322D6B52400741B0A /* libcurl_la-security.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-security.o"; path = "../../curl-7.65.1/lib/libcurl_la-security.o"; sourceTree = "<group>"; };
+		A50242D422D6B52400741B0A /* libcurl_la-md4.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-md4.o"; path = "../../curl-7.65.1/lib/libcurl_la-md4.o"; sourceTree = "<group>"; };
+		A50242D522D6B52400741B0A /* libcurl_la-netrc.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-netrc.o"; path = "../../curl-7.65.1/lib/libcurl_la-netrc.o"; sourceTree = "<group>"; };
+		A50242D622D6B52400741B0A /* curl-curl_ctype.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "curl-curl_ctype.o"; path = "../../curl-7.65.1/lib/curl-curl_ctype.o"; sourceTree = "<group>"; };
+		A50242D722D6B52400741B0A /* libcurl_la-http_chunks.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-http_chunks.o"; path = "../../curl-7.65.1/lib/libcurl_la-http_chunks.o"; sourceTree = "<group>"; };
+		A50242D822D6B52400741B0A /* libcurl_la-curl_sasl.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_sasl.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_sasl.o"; sourceTree = "<group>"; };
+		A50242D922D6B52500741B0A /* libcurl_la-ssh-libssh.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-ssh-libssh.o"; path = "../../curl-7.65.1/lib/libcurl_la-ssh-libssh.o"; sourceTree = "<group>"; };
+		A50242DA22D6B52500741B0A /* libcurl_la-escape.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-escape.o"; path = "../../curl-7.65.1/lib/libcurl_la-escape.o"; sourceTree = "<group>"; };
+		A50242DB22D6B52500741B0A /* libcurl_la-content_encoding.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-content_encoding.o"; path = "../../curl-7.65.1/lib/libcurl_la-content_encoding.o"; sourceTree = "<group>"; };
+		A50242DC22D6B52500741B0A /* libcurl_la-if2ip.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-if2ip.o"; path = "../../curl-7.65.1/lib/libcurl_la-if2ip.o"; sourceTree = "<group>"; };
+		A50242DD22D6B52500741B0A /* libcurl_la-hmac.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-hmac.o"; path = "../../curl-7.65.1/lib/libcurl_la-hmac.o"; sourceTree = "<group>"; };
+		A50242DE22D6B52500741B0A /* libcurl_la-curl_rtmp.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_rtmp.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_rtmp.o"; sourceTree = "<group>"; };
+		A50242DF22D6B52500741B0A /* libcurl_la-splay.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-splay.o"; path = "../../curl-7.65.1/lib/libcurl_la-splay.o"; sourceTree = "<group>"; };
+		A50242E022D6B52500741B0A /* libcurl_la-getenv.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-getenv.o"; path = "../../curl-7.65.1/lib/libcurl_la-getenv.o"; sourceTree = "<group>"; };
+		A50242E122D6B52500741B0A /* libcurl_la-smb.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-smb.o"; path = "../../curl-7.65.1/lib/libcurl_la-smb.o"; sourceTree = "<group>"; };
+		A50242E222D6B52500741B0A /* libcurl_la-krb5.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-krb5.o"; path = "../../curl-7.65.1/lib/libcurl_la-krb5.o"; sourceTree = "<group>"; };
+		A50242E322D6B52500741B0A /* libcurl_la-ftp.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-ftp.o"; path = "../../curl-7.65.1/lib/libcurl_la-ftp.o"; sourceTree = "<group>"; };
+		A50242E422D6B52500741B0A /* libcurl_la-slist.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-slist.o"; path = "../../curl-7.65.1/lib/libcurl_la-slist.o"; sourceTree = "<group>"; };
+		A50242E522D6B52500741B0A /* libcurl_la-cookie.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-cookie.o"; path = "../../curl-7.65.1/lib/libcurl_la-cookie.o"; sourceTree = "<group>"; };
+		A50242E622D6B52500741B0A /* libcurl_la-pingpong.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-pingpong.o"; path = "../../curl-7.65.1/lib/libcurl_la-pingpong.o"; sourceTree = "<group>"; };
+		A50242E722D6B52500741B0A /* libcurl_la-nonblock.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-nonblock.o"; path = "../../curl-7.65.1/lib/libcurl_la-nonblock.o"; sourceTree = "<group>"; };
+		A50242E822D6B52500741B0A /* libcurl_la-socks_sspi.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-socks_sspi.o"; path = "../../curl-7.65.1/lib/libcurl_la-socks_sspi.o"; sourceTree = "<group>"; };
+		A50242E922D6B52500741B0A /* libcurl_la-curl_range.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_range.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_range.o"; sourceTree = "<group>"; };
+		A50242EA22D6B52500741B0A /* libcurl_la-http.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-http.o"; path = "../../curl-7.65.1/lib/libcurl_la-http.o"; sourceTree = "<group>"; };
+		A50242EB22D6B52500741B0A /* libcurl_la-doh.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-doh.o"; path = "../../curl-7.65.1/lib/libcurl_la-doh.o"; sourceTree = "<group>"; };
+		A50242EC22D6B52500741B0A /* libcurl_la-rtsp.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-rtsp.o"; path = "../../curl-7.65.1/lib/libcurl_la-rtsp.o"; sourceTree = "<group>"; };
+		A50242ED22D6B52500741B0A /* libcurl_la-hostip4.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-hostip4.o"; path = "../../curl-7.65.1/lib/libcurl_la-hostip4.o"; sourceTree = "<group>"; };
+		A50242EE22D6B52500741B0A /* libcurl_la-http_ntlm.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-http_ntlm.o"; path = "../../curl-7.65.1/lib/libcurl_la-http_ntlm.o"; sourceTree = "<group>"; };
+		A50242EF22D6B52500741B0A /* libcurl_la-memdebug.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-memdebug.o"; path = "../../curl-7.65.1/lib/libcurl_la-memdebug.o"; sourceTree = "<group>"; };
+		A50242F022D6B52500741B0A /* libcurl_la-ssh.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-ssh.o"; path = "../../curl-7.65.1/lib/libcurl_la-ssh.o"; sourceTree = "<group>"; };
+		A50242F122D6B52500741B0A /* libcurl_la-strtoofft.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-strtoofft.o"; path = "../../curl-7.65.1/lib/libcurl_la-strtoofft.o"; sourceTree = "<group>"; };
+		A50242F222D6B52500741B0A /* libcurl_la-select.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-select.o"; path = "../../curl-7.65.1/lib/libcurl_la-select.o"; sourceTree = "<group>"; };
+		A50242F322D6B52500741B0A /* libcurl_la-idn_win32.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-idn_win32.o"; path = "../../curl-7.65.1/lib/libcurl_la-idn_win32.o"; sourceTree = "<group>"; };
+		A50242F422D6B52500741B0A /* libcurl_la-http_proxy.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-http_proxy.o"; path = "../../curl-7.65.1/lib/libcurl_la-http_proxy.o"; sourceTree = "<group>"; };
+		A50242F522D6B52500741B0A /* libcurl_la-hostip6.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-hostip6.o"; path = "../../curl-7.65.1/lib/libcurl_la-hostip6.o"; sourceTree = "<group>"; };
+		A50242F622D6B52500741B0A /* libcurl_la-llist.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-llist.o"; path = "../../curl-7.65.1/lib/libcurl_la-llist.o"; sourceTree = "<group>"; };
+		A50242F722D6B52500741B0A /* libcurl_la-hostsyn.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-hostsyn.o"; path = "../../curl-7.65.1/lib/libcurl_la-hostsyn.o"; sourceTree = "<group>"; };
+		A50242F822D6B52500741B0A /* libcurl_la-formdata.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-formdata.o"; path = "../../curl-7.65.1/lib/libcurl_la-formdata.o"; sourceTree = "<group>"; };
+		A50242F922D6B52500741B0A /* libcurl_la-inet_ntop.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-inet_ntop.o"; path = "../../curl-7.65.1/lib/libcurl_la-inet_ntop.o"; sourceTree = "<group>"; };
+		A50242FA22D6B52500741B0A /* libcurl_la-mime.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-mime.o"; path = "../../curl-7.65.1/lib/libcurl_la-mime.o"; sourceTree = "<group>"; };
+		A50242FB22D6B52500741B0A /* libcurl_la-dict.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-dict.o"; path = "../../curl-7.65.1/lib/libcurl_la-dict.o"; sourceTree = "<group>"; };
+		A50242FC22D6B52500741B0A /* libcurl_la-telnet.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-telnet.o"; path = "../../curl-7.65.1/lib/libcurl_la-telnet.o"; sourceTree = "<group>"; };
+		A50242FD22D6B52500741B0A /* libcurl_la-multi.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-multi.o"; path = "../../curl-7.65.1/lib/libcurl_la-multi.o"; sourceTree = "<group>"; };
+		A50242FE22D6B52500741B0A /* libcurl_la-fileinfo.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-fileinfo.o"; path = "../../curl-7.65.1/lib/libcurl_la-fileinfo.o"; sourceTree = "<group>"; };
+		A50242FF22D6B52500741B0A /* libcurl_la-conncache.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-conncache.o"; path = "../../curl-7.65.1/lib/libcurl_la-conncache.o"; sourceTree = "<group>"; };
+		A502430022D6B52500741B0A /* libcurl_la-asyn-thread.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-asyn-thread.o"; path = "../../curl-7.65.1/lib/libcurl_la-asyn-thread.o"; sourceTree = "<group>"; };
+		A502430122D6B52500741B0A /* libcurl_la-curl_gethostname.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_gethostname.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_gethostname.o"; sourceTree = "<group>"; };
+		A502430222D6B52500741B0A /* libcurl_la-urlapi.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-urlapi.o"; path = "../../curl-7.65.1/lib/libcurl_la-urlapi.o"; sourceTree = "<group>"; };
+		A502430322D6B52500741B0A /* libcurl_la-connect.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-connect.o"; path = "../../curl-7.65.1/lib/libcurl_la-connect.o"; sourceTree = "<group>"; };
+		A502430422D6B52500741B0A /* libcurl_la-sha256.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-sha256.o"; path = "../../curl-7.65.1/lib/libcurl_la-sha256.o"; sourceTree = "<group>"; };
+		A502430522D6B52500741B0A /* libcurl_la-hostasyn.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-hostasyn.o"; path = "../../curl-7.65.1/lib/libcurl_la-hostasyn.o"; sourceTree = "<group>"; };
+		A502430622D6B52500741B0A /* libcurl_la-dotdot.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-dotdot.o"; path = "../../curl-7.65.1/lib/libcurl_la-dotdot.o"; sourceTree = "<group>"; };
+		A502430722D6B52500741B0A /* libcurl_la-curl_fnmatch.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_fnmatch.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_fnmatch.o"; sourceTree = "<group>"; };
+		A502430822D6B52500741B0A /* libcurl_la-sendf.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-sendf.o"; path = "../../curl-7.65.1/lib/libcurl_la-sendf.o"; sourceTree = "<group>"; };
+		A502430922D6B52500741B0A /* libcurl_la-curl_threads.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_threads.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_threads.o"; sourceTree = "<group>"; };
+		A502430A22D6B52500741B0A /* libcurl_la-strtok.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-strtok.o"; path = "../../curl-7.65.1/lib/libcurl_la-strtok.o"; sourceTree = "<group>"; };
+		A502430B22D6B52500741B0A /* libcurl_la-curl_des.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_des.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_des.o"; sourceTree = "<group>"; };
+		A502430C22D6B52500741B0A /* libcurl_la-http_negotiate.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-http_negotiate.o"; path = "../../curl-7.65.1/lib/libcurl_la-http_negotiate.o"; sourceTree = "<group>"; };
+		A502430D22D6B52500741B0A /* curl-warnless.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "curl-warnless.o"; path = "../../curl-7.65.1/lib/curl-warnless.o"; sourceTree = "<group>"; };
+		A502430E22D6B52500741B0A /* libcurl_la-curl_ntlm_wb.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_ntlm_wb.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_ntlm_wb.o"; sourceTree = "<group>"; };
+		A502430F22D6B52500741B0A /* libcurl_la-smtp.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-smtp.o"; path = "../../curl-7.65.1/lib/libcurl_la-smtp.o"; sourceTree = "<group>"; };
+		A502431022D6B52500741B0A /* curl-strtoofft.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "curl-strtoofft.o"; path = "../../curl-7.65.1/lib/curl-strtoofft.o"; sourceTree = "<group>"; };
+		A502431122D6B52500741B0A /* libcurl_la-pop3.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-pop3.o"; path = "../../curl-7.65.1/lib/libcurl_la-pop3.o"; sourceTree = "<group>"; };
+		A502431222D6B52500741B0A /* libcurl_la-imap.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-imap.o"; path = "../../curl-7.65.1/lib/libcurl_la-imap.o"; sourceTree = "<group>"; };
+		A502431322D6B52600741B0A /* libcurl_la-url.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-url.o"; path = "../../curl-7.65.1/lib/libcurl_la-url.o"; sourceTree = "<group>"; };
+		A502431422D6B52600741B0A /* libcurl_la-gopher.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-gopher.o"; path = "../../curl-7.65.1/lib/libcurl_la-gopher.o"; sourceTree = "<group>"; };
+		A502431522D6B52600741B0A /* libcurl_la-http2.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-http2.o"; path = "../../curl-7.65.1/lib/libcurl_la-http2.o"; sourceTree = "<group>"; };
+		A502431622D6B52600741B0A /* libcurl_la-openldap.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-openldap.o"; path = "../../curl-7.65.1/lib/libcurl_la-openldap.o"; sourceTree = "<group>"; };
+		A502431722D6B52600741B0A /* libcurl_la-share.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-share.o"; path = "../../curl-7.65.1/lib/libcurl_la-share.o"; sourceTree = "<group>"; };
+		A502431822D6B52600741B0A /* libcurl_la-setopt.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-setopt.o"; path = "../../curl-7.65.1/lib/libcurl_la-setopt.o"; sourceTree = "<group>"; };
+		A502431922D6B52600741B0A /* libcurl_la-curl_addrinfo.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-curl_addrinfo.o"; path = "../../curl-7.65.1/lib/libcurl_la-curl_addrinfo.o"; sourceTree = "<group>"; };
+		A502431A22D6B52600741B0A /* libcurl_la-asyn-ares.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-asyn-ares.o"; path = "../../curl-7.65.1/lib/libcurl_la-asyn-ares.o"; sourceTree = "<group>"; };
+		A502431B22D6B52600741B0A /* libcurl_la-hash.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-hash.o"; path = "../../curl-7.65.1/lib/libcurl_la-hash.o"; sourceTree = "<group>"; };
+		A502431C22D6B52600741B0A /* libcurl_la-getinfo.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-getinfo.o"; path = "../../curl-7.65.1/lib/libcurl_la-getinfo.o"; sourceTree = "<group>"; };
+		A502431D22D6B52600741B0A /* libcurl_la-easy.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-easy.o"; path = "../../curl-7.65.1/lib/libcurl_la-easy.o"; sourceTree = "<group>"; };
+		A502431E22D6B52600741B0A /* libcurl_la-file.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-file.o"; path = "../../curl-7.65.1/lib/libcurl_la-file.o"; sourceTree = "<group>"; };
+		A502431F22D6B52600741B0A /* libcurl_la-transfer.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-transfer.o"; path = "../../curl-7.65.1/lib/libcurl_la-transfer.o"; sourceTree = "<group>"; };
+		A502432022D6B52600741B0A /* libcurl_la-mprintf.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-mprintf.o"; path = "../../curl-7.65.1/lib/libcurl_la-mprintf.o"; sourceTree = "<group>"; };
+		A502432122D6B52600741B0A /* libcurl_la-strerror.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-strerror.o"; path = "../../curl-7.65.1/lib/libcurl_la-strerror.o"; sourceTree = "<group>"; };
+		A502432222D6B52600741B0A /* libcurl_la-system_win32.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "libcurl_la-system_win32.o"; path = "../../curl-7.65.1/lib/libcurl_la-system_win32.o"; sourceTree = "<group>"; };
+		A502439722D6B54F00741B0A /* libcurl_la-ssh-libssh.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-ssh-libssh.lo"; path = "../../curl-7.65.1/lib/libcurl_la-ssh-libssh.lo"; sourceTree = "<group>"; };
+		A502439822D6B54F00741B0A /* libcurl_la-http_digest.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-http_digest.lo"; path = "../../curl-7.65.1/lib/libcurl_la-http_digest.lo"; sourceTree = "<group>"; };
+		A502439922D6B54F00741B0A /* libcurl_la-llist.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-llist.lo"; path = "../../curl-7.65.1/lib/libcurl_la-llist.lo"; sourceTree = "<group>"; };
+		A502439A22D6B54F00741B0A /* libcurl_la-curl_addrinfo.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_addrinfo.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_addrinfo.lo"; sourceTree = "<group>"; };
+		A502439B22D6B54F00741B0A /* libcurl_la-parsedate.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-parsedate.lo"; path = "../../curl-7.65.1/lib/libcurl_la-parsedate.lo"; sourceTree = "<group>"; };
+		A502439C22D6B55000741B0A /* libcurl_la-content_encoding.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-content_encoding.lo"; path = "../../curl-7.65.1/lib/libcurl_la-content_encoding.lo"; sourceTree = "<group>"; };
+		A502439D22D6B55000741B0A /* libcurl_la-curl_des.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_des.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_des.lo"; sourceTree = "<group>"; };
+		A502439E22D6B55000741B0A /* libcurl_la-warnless.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-warnless.lo"; path = "../../curl-7.65.1/lib/libcurl_la-warnless.lo"; sourceTree = "<group>"; };
+		A502439F22D6B55000741B0A /* libcurl_la-curl_multibyte.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_multibyte.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_multibyte.lo"; sourceTree = "<group>"; };
+		A50243A022D6B55000741B0A /* libcurl_la-http_chunks.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-http_chunks.lo"; path = "../../curl-7.65.1/lib/libcurl_la-http_chunks.lo"; sourceTree = "<group>"; };
+		A50243A122D6B55000741B0A /* libcurl_la-cookie.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-cookie.lo"; path = "../../curl-7.65.1/lib/libcurl_la-cookie.lo"; sourceTree = "<group>"; };
+		A50243A222D6B55000741B0A /* libcurl_la-smb.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-smb.lo"; path = "../../curl-7.65.1/lib/libcurl_la-smb.lo"; sourceTree = "<group>"; };
+		A50243A322D6B55000741B0A /* libcurl_la-non-ascii.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-non-ascii.lo"; path = "../../curl-7.65.1/lib/libcurl_la-non-ascii.lo"; sourceTree = "<group>"; };
+		A50243A422D6B55000741B0A /* libcurl_la-easy.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-easy.lo"; path = "../../curl-7.65.1/lib/libcurl_la-easy.lo"; sourceTree = "<group>"; };
+		A50243A522D6B55000741B0A /* libcurl_la-http.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-http.lo"; path = "../../curl-7.65.1/lib/libcurl_la-http.lo"; sourceTree = "<group>"; };
+		A50243A622D6B55000741B0A /* libcurl_la-sendf.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-sendf.lo"; path = "../../curl-7.65.1/lib/libcurl_la-sendf.lo"; sourceTree = "<group>"; };
+		A50243A722D6B55000741B0A /* libcurl_la-timeval.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-timeval.lo"; path = "../../curl-7.65.1/lib/libcurl_la-timeval.lo"; sourceTree = "<group>"; };
+		A50243A822D6B55000741B0A /* libcurl_la-netrc.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-netrc.lo"; path = "../../curl-7.65.1/lib/libcurl_la-netrc.lo"; sourceTree = "<group>"; };
+		A50243A922D6B55000741B0A /* libcurl_la-curl_range.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_range.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_range.lo"; sourceTree = "<group>"; };
+		A50243AA22D6B55000741B0A /* libcurl_la-ftp.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-ftp.lo"; path = "../../curl-7.65.1/lib/libcurl_la-ftp.lo"; sourceTree = "<group>"; };
+		A50243AB22D6B55000741B0A /* libcurl_la-getenv.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-getenv.lo"; path = "../../curl-7.65.1/lib/libcurl_la-getenv.lo"; sourceTree = "<group>"; };
+		A50243AC22D6B55000741B0A /* libcurl_la-hmac.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-hmac.lo"; path = "../../curl-7.65.1/lib/libcurl_la-hmac.lo"; sourceTree = "<group>"; };
+		A50243AD22D6B55000741B0A /* libcurl_la-curl_sspi.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_sspi.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_sspi.lo"; sourceTree = "<group>"; };
+		A50243AE22D6B55000741B0A /* libcurl_la-hostcheck.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-hostcheck.lo"; path = "../../curl-7.65.1/lib/libcurl_la-hostcheck.lo"; sourceTree = "<group>"; };
+		A50243AF22D6B55000741B0A /* libcurl_la-curl_fnmatch.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_fnmatch.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_fnmatch.lo"; sourceTree = "<group>"; };
+		A50243B022D6B55000741B0A /* libcurl_la-hostip.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-hostip.lo"; path = "../../curl-7.65.1/lib/libcurl_la-hostip.lo"; sourceTree = "<group>"; };
+		A50243B122D6B55000741B0A /* libcurl_la-md4.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-md4.lo"; path = "../../curl-7.65.1/lib/libcurl_la-md4.lo"; sourceTree = "<group>"; };
+		A50243B222D6B55100741B0A /* libcurl_la-conncache.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-conncache.lo"; path = "../../curl-7.65.1/lib/libcurl_la-conncache.lo"; sourceTree = "<group>"; };
+		A50243B322D6B55100741B0A /* libcurl_la-gopher.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-gopher.lo"; path = "../../curl-7.65.1/lib/libcurl_la-gopher.lo"; sourceTree = "<group>"; };
+		A50243B422D6B55100741B0A /* libcurl_la-socks_gssapi.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-socks_gssapi.lo"; path = "../../curl-7.65.1/lib/libcurl_la-socks_gssapi.lo"; sourceTree = "<group>"; };
+		A50243B522D6B55100741B0A /* libcurl_la-curl_memrchr.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_memrchr.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_memrchr.lo"; sourceTree = "<group>"; };
+		A50243B622D6B55100741B0A /* libcurl_la-curl_ctype.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_ctype.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_ctype.lo"; sourceTree = "<group>"; };
+		A50243B722D6B55100741B0A /* libcurl_la-speedcheck.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-speedcheck.lo"; path = "../../curl-7.65.1/lib/libcurl_la-speedcheck.lo"; sourceTree = "<group>"; };
+		A50243B822D6B55100741B0A /* libcurl_la-hash.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-hash.lo"; path = "../../curl-7.65.1/lib/libcurl_la-hash.lo"; sourceTree = "<group>"; };
+		A50243B922D6B55100741B0A /* libcurl_la-strtoofft.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-strtoofft.lo"; path = "../../curl-7.65.1/lib/libcurl_la-strtoofft.lo"; sourceTree = "<group>"; };
+		A50243BA22D6B55100741B0A /* libcurl_la-dict.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-dict.lo"; path = "../../curl-7.65.1/lib/libcurl_la-dict.lo"; sourceTree = "<group>"; };
+		A50243BB22D6B55100741B0A /* libcurl_la-curl_rtmp.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_rtmp.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_rtmp.lo"; sourceTree = "<group>"; };
+		A50243BC22D6B55100741B0A /* libcurl_la-if2ip.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-if2ip.lo"; path = "../../curl-7.65.1/lib/libcurl_la-if2ip.lo"; sourceTree = "<group>"; };
+		A50243BD22D6B55100741B0A /* libcurl_la-curl_ntlm_wb.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_ntlm_wb.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_ntlm_wb.lo"; sourceTree = "<group>"; };
+		A50243BE22D6B55100741B0A /* libcurl_la-curl_gethostname.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_gethostname.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_gethostname.lo"; sourceTree = "<group>"; };
+		A50243BF22D6B55100741B0A /* libcurl_la-socks_sspi.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-socks_sspi.lo"; path = "../../curl-7.65.1/lib/libcurl_la-socks_sspi.lo"; sourceTree = "<group>"; };
+		A50243C022D6B55100741B0A /* libcurl_la-http_negotiate.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-http_negotiate.lo"; path = "../../curl-7.65.1/lib/libcurl_la-http_negotiate.lo"; sourceTree = "<group>"; };
+		A50243C122D6B55100741B0A /* libcurl_la-pop3.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-pop3.lo"; path = "../../curl-7.65.1/lib/libcurl_la-pop3.lo"; sourceTree = "<group>"; };
+		A50243C222D6B55100741B0A /* libcurl_la-formdata.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-formdata.lo"; path = "../../curl-7.65.1/lib/libcurl_la-formdata.lo"; sourceTree = "<group>"; };
+		A50243C322D6B55100741B0A /* libcurl_la-transfer.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-transfer.lo"; path = "../../curl-7.65.1/lib/libcurl_la-transfer.lo"; sourceTree = "<group>"; };
+		A50243C422D6B55100741B0A /* libcurl_la-url.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-url.lo"; path = "../../curl-7.65.1/lib/libcurl_la-url.lo"; sourceTree = "<group>"; };
+		A50243C522D6B55100741B0A /* libcurl_la-psl.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-psl.lo"; path = "../../curl-7.65.1/lib/libcurl_la-psl.lo"; sourceTree = "<group>"; };
+		A50243C622D6B55200741B0A /* libcurl_la-select.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-select.lo"; path = "../../curl-7.65.1/lib/libcurl_la-select.lo"; sourceTree = "<group>"; };
+		A50243C722D6B55200741B0A /* libcurl_la-nonblock.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-nonblock.lo"; path = "../../curl-7.65.1/lib/libcurl_la-nonblock.lo"; sourceTree = "<group>"; };
+		A50243C822D6B55200741B0A /* libcurl_la-imap.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-imap.lo"; path = "../../curl-7.65.1/lib/libcurl_la-imap.lo"; sourceTree = "<group>"; };
+		A50243C922D6B55200741B0A /* libcurl_la-ssh.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-ssh.lo"; path = "../../curl-7.65.1/lib/libcurl_la-ssh.lo"; sourceTree = "<group>"; };
+		A50243CA22D6B55200741B0A /* libcurl_la-ftplistparser.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-ftplistparser.lo"; path = "../../curl-7.65.1/lib/libcurl_la-ftplistparser.lo"; sourceTree = "<group>"; };
+		A50243CB22D6B55200741B0A /* libcurl_la-curl_threads.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_threads.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_threads.lo"; sourceTree = "<group>"; };
+		A50243CC22D6B55200741B0A /* libcurl_la-http2.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-http2.lo"; path = "../../curl-7.65.1/lib/libcurl_la-http2.lo"; sourceTree = "<group>"; };
+		A50243CD22D6B55200741B0A /* libcurl_la-http_proxy.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-http_proxy.lo"; path = "../../curl-7.65.1/lib/libcurl_la-http_proxy.lo"; sourceTree = "<group>"; };
+		A50243CE22D6B55200741B0A /* libcurl_la-telnet.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-telnet.lo"; path = "../../curl-7.65.1/lib/libcurl_la-telnet.lo"; sourceTree = "<group>"; };
+		A50243CF22D6B55200741B0A /* libcurl_la-hostasyn.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-hostasyn.lo"; path = "../../curl-7.65.1/lib/libcurl_la-hostasyn.lo"; sourceTree = "<group>"; };
+		A50243D022D6B55200741B0A /* libcurl_la-pingpong.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-pingpong.lo"; path = "../../curl-7.65.1/lib/libcurl_la-pingpong.lo"; sourceTree = "<group>"; };
+		A50243D122D6B55200741B0A /* libcurl_la-curl_sasl.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_sasl.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_sasl.lo"; sourceTree = "<group>"; };
+		A50243D222D6B55200741B0A /* libcurl_la-ldap.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-ldap.lo"; path = "../../curl-7.65.1/lib/libcurl_la-ldap.lo"; sourceTree = "<group>"; };
+		A50243D322D6B55200741B0A /* libcurl_la-hostsyn.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-hostsyn.lo"; path = "../../curl-7.65.1/lib/libcurl_la-hostsyn.lo"; sourceTree = "<group>"; };
+		A50243D422D6B55200741B0A /* libcurl_la-hostip4.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-hostip4.lo"; path = "../../curl-7.65.1/lib/libcurl_la-hostip4.lo"; sourceTree = "<group>"; };
+		A50243D522D6B55200741B0A /* libcurl_la-smtp.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-smtp.lo"; path = "../../curl-7.65.1/lib/libcurl_la-smtp.lo"; sourceTree = "<group>"; };
+		A50243D622D6B55200741B0A /* libcurl_la-md5.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-md5.lo"; path = "../../curl-7.65.1/lib/libcurl_la-md5.lo"; sourceTree = "<group>"; };
+		A50243D722D6B55200741B0A /* libcurl_la-http_ntlm.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-http_ntlm.lo"; path = "../../curl-7.65.1/lib/libcurl_la-http_ntlm.lo"; sourceTree = "<group>"; };
+		A50243D822D6B55200741B0A /* libcurl_la-krb5.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-krb5.lo"; path = "../../curl-7.65.1/lib/libcurl_la-krb5.lo"; sourceTree = "<group>"; };
+		A50243D922D6B55200741B0A /* libcurl_la-curl_endian.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_endian.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_endian.lo"; sourceTree = "<group>"; };
+		A50243DA22D6B55200741B0A /* libcurl_la-mprintf.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-mprintf.lo"; path = "../../curl-7.65.1/lib/libcurl_la-mprintf.lo"; sourceTree = "<group>"; };
+		A50243DB22D6B55200741B0A /* libcurl_la-tftp.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-tftp.lo"; path = "../../curl-7.65.1/lib/libcurl_la-tftp.lo"; sourceTree = "<group>"; };
+		A50243DC22D6B55200741B0A /* libcurl_la-share.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-share.lo"; path = "../../curl-7.65.1/lib/libcurl_la-share.lo"; sourceTree = "<group>"; };
+		A50243DD22D6B55200741B0A /* libcurl_la-x509asn1.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-x509asn1.lo"; path = "../../curl-7.65.1/lib/libcurl_la-x509asn1.lo"; sourceTree = "<group>"; };
+		A50243DE22D6B55200741B0A /* libcurl_la-rand.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-rand.lo"; path = "../../curl-7.65.1/lib/libcurl_la-rand.lo"; sourceTree = "<group>"; };
+		A50243DF22D6B55200741B0A /* libcurl_la-curl_ntlm_core.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_ntlm_core.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_ntlm_core.lo"; sourceTree = "<group>"; };
+		A50243E022D6B55200741B0A /* libcurl_la-wildcard.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-wildcard.lo"; path = "../../curl-7.65.1/lib/libcurl_la-wildcard.lo"; sourceTree = "<group>"; };
+		A50243E122D6B55300741B0A /* libcurl_la-file.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-file.lo"; path = "../../curl-7.65.1/lib/libcurl_la-file.lo"; sourceTree = "<group>"; };
+		A50243E222D6B55300741B0A /* libcurl_la-escape.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-escape.lo"; path = "../../curl-7.65.1/lib/libcurl_la-escape.lo"; sourceTree = "<group>"; };
+		A50243E322D6B55300741B0A /* libcurl_la-rtsp.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-rtsp.lo"; path = "../../curl-7.65.1/lib/libcurl_la-rtsp.lo"; sourceTree = "<group>"; };
+		A50243E422D6B55300741B0A /* libcurl_la-dotdot.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-dotdot.lo"; path = "../../curl-7.65.1/lib/libcurl_la-dotdot.lo"; sourceTree = "<group>"; };
+		A50243E522D6B55300741B0A /* libcurl_la-amigaos.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-amigaos.lo"; path = "../../curl-7.65.1/lib/libcurl_la-amigaos.lo"; sourceTree = "<group>"; };
+		A50243E622D6B55300741B0A /* libcurl_la-socks.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-socks.lo"; path = "../../curl-7.65.1/lib/libcurl_la-socks.lo"; sourceTree = "<group>"; };
+		A50243E722D6B55300741B0A /* libcurl_la-mime.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-mime.lo"; path = "../../curl-7.65.1/lib/libcurl_la-mime.lo"; sourceTree = "<group>"; };
+		A50243E822D6B55300741B0A /* libcurl_la-strerror.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-strerror.lo"; path = "../../curl-7.65.1/lib/libcurl_la-strerror.lo"; sourceTree = "<group>"; };
+		A50243E922D6B55300741B0A /* libcurl_la-memdebug.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-memdebug.lo"; path = "../../curl-7.65.1/lib/libcurl_la-memdebug.lo"; sourceTree = "<group>"; };
+		A50243EA22D6B55300741B0A /* libcurl_la-system_win32.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-system_win32.lo"; path = "../../curl-7.65.1/lib/libcurl_la-system_win32.lo"; sourceTree = "<group>"; };
+		A50243EB22D6B55300741B0A /* libcurl_la-asyn-ares.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-asyn-ares.lo"; path = "../../curl-7.65.1/lib/libcurl_la-asyn-ares.lo"; sourceTree = "<group>"; };
+		A50243EC22D6B55300741B0A /* libcurl_la-slist.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-slist.lo"; path = "../../curl-7.65.1/lib/libcurl_la-slist.lo"; sourceTree = "<group>"; };
+		A50243ED22D6B55300741B0A /* libcurl_la-connect.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-connect.lo"; path = "../../curl-7.65.1/lib/libcurl_la-connect.lo"; sourceTree = "<group>"; };
+		A50243EE22D6B55300741B0A /* libcurl_la-idn_win32.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-idn_win32.lo"; path = "../../curl-7.65.1/lib/libcurl_la-idn_win32.lo"; sourceTree = "<group>"; };
+		A50243EF22D6B55300741B0A /* libcurl_la-asyn-thread.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-asyn-thread.lo"; path = "../../curl-7.65.1/lib/libcurl_la-asyn-thread.lo"; sourceTree = "<group>"; };
+		A50243F022D6B55300741B0A /* libcurl_la-strdup.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-strdup.lo"; path = "../../curl-7.65.1/lib/libcurl_la-strdup.lo"; sourceTree = "<group>"; };
+		A50243F122D6B55300741B0A /* libcurl_la-curl_gssapi.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_gssapi.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_gssapi.lo"; sourceTree = "<group>"; };
+		A50243F222D6B55300741B0A /* libcurl_la-openldap.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-openldap.lo"; path = "../../curl-7.65.1/lib/libcurl_la-openldap.lo"; sourceTree = "<group>"; };
+		A50243F322D6B55300741B0A /* libcurl_la-curl_get_line.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_get_line.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_get_line.lo"; sourceTree = "<group>"; };
+		A50243F422D6B55300741B0A /* libcurl_la-progress.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-progress.lo"; path = "../../curl-7.65.1/lib/libcurl_la-progress.lo"; sourceTree = "<group>"; };
+		A50243F522D6B55300741B0A /* libcurl_la-urlapi.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-urlapi.lo"; path = "../../curl-7.65.1/lib/libcurl_la-urlapi.lo"; sourceTree = "<group>"; };
+		A50243F622D6B55300741B0A /* libcurl_la-curl_path.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-curl_path.lo"; path = "../../curl-7.65.1/lib/libcurl_la-curl_path.lo"; sourceTree = "<group>"; };
+		A50243F722D6B55300741B0A /* libcurl_la-multi.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-multi.lo"; path = "../../curl-7.65.1/lib/libcurl_la-multi.lo"; sourceTree = "<group>"; };
+		A50243F822D6B55300741B0A /* libcurl_la-doh.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-doh.lo"; path = "../../curl-7.65.1/lib/libcurl_la-doh.lo"; sourceTree = "<group>"; };
+		A50243F922D6B55300741B0A /* libcurl_la-fileinfo.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-fileinfo.lo"; path = "../../curl-7.65.1/lib/libcurl_la-fileinfo.lo"; sourceTree = "<group>"; };
+		A50243FA22D6B55300741B0A /* libcurl_la-version.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-version.lo"; path = "../../curl-7.65.1/lib/libcurl_la-version.lo"; sourceTree = "<group>"; };
+		A50243FB22D6B55300741B0A /* libcurl_la-altsvc.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-altsvc.lo"; path = "../../curl-7.65.1/lib/libcurl_la-altsvc.lo"; sourceTree = "<group>"; };
+		A50243FC22D6B55300741B0A /* libcurl_la-base64.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-base64.lo"; path = "../../curl-7.65.1/lib/libcurl_la-base64.lo"; sourceTree = "<group>"; };
+		A50243FD22D6B55400741B0A /* libcurl_la-setopt.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-setopt.lo"; path = "../../curl-7.65.1/lib/libcurl_la-setopt.lo"; sourceTree = "<group>"; };
+		A50243FE22D6B55400741B0A /* libcurl_la-strtok.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-strtok.lo"; path = "../../curl-7.65.1/lib/libcurl_la-strtok.lo"; sourceTree = "<group>"; };
+		A50243FF22D6B55400741B0A /* libcurl_la-inet_ntop.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-inet_ntop.lo"; path = "../../curl-7.65.1/lib/libcurl_la-inet_ntop.lo"; sourceTree = "<group>"; };
+		A502440022D6B55400741B0A /* libcurl_la-splay.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-splay.lo"; path = "../../curl-7.65.1/lib/libcurl_la-splay.lo"; sourceTree = "<group>"; };
+		A502440122D6B55400741B0A /* libcurl_la-inet_pton.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-inet_pton.lo"; path = "../../curl-7.65.1/lib/libcurl_la-inet_pton.lo"; sourceTree = "<group>"; };
+		A502440222D6B55400741B0A /* libcurl_la-sha256.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-sha256.lo"; path = "../../curl-7.65.1/lib/libcurl_la-sha256.lo"; sourceTree = "<group>"; };
+		A502440322D6B55400741B0A /* libcurl_la-hostip6.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-hostip6.lo"; path = "../../curl-7.65.1/lib/libcurl_la-hostip6.lo"; sourceTree = "<group>"; };
+		A502440422D6B55400741B0A /* libcurl_la-getinfo.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-getinfo.lo"; path = "../../curl-7.65.1/lib/libcurl_la-getinfo.lo"; sourceTree = "<group>"; };
+		A502440522D6B55400741B0A /* libcurl_la-strcase.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-strcase.lo"; path = "../../curl-7.65.1/lib/libcurl_la-strcase.lo"; sourceTree = "<group>"; };
+		A502440622D6B55400741B0A /* libcurl_la-security.lo */ = {isa = PBXFileReference; lastKnownFileType = text; name = "libcurl_la-security.lo"; path = "../../curl-7.65.1/lib/libcurl_la-security.lo"; sourceTree = "<group>"; };
+		A502447722D6B6D600741B0A /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = ../../../../../../usr/lib/libcurl.4.dylib; sourceTree = "<group>"; };
+		A502447922D6B7E400741B0A /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../../season2_etc/output/ios/curl-ios-x86_64/lib/libcurl.a"; sourceTree = "<group>"; };
+		A502447B22D6B8A700741B0A /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = "../../curl-7.65.1/lib/libcurl.a"; sourceTree = "<group>"; };
+		A502447D22D6B8CD00741B0A /* libcurl.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libcurl.la; path = "../../curl-7.65.1/lib/libcurl.la"; sourceTree = "<group>"; };
+		A502447F22D6B93A00741B0A /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = ../../../../../../usr/local/lib/libcurl.dylib; sourceTree = "<group>"; };
+		A502448122D6B9EE00741B0A /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../../../usr/local/lib/libcurl.a; sourceTree = "<group>"; };
+		A502448522D6BB2200741B0A /* libcurl.la */ = {isa = PBXFileReference; lastKnownFileType = text; name = libcurl.la; path = ../../../../../../usr/local/lib/libcurl.la; sourceTree = "<group>"; };
+		A502448622D6BB2200741B0A /* libcurl.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.4.dylib; path = ../../../../../../usr/local/lib/libcurl.4.dylib; sourceTree = "<group>"; };
+		A502448922D6CE2400741B0A /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../../../../../usr/local/curl/lib/libcurl.a; sourceTree = "<group>"; };
+		A502448B22D6CE3400741B0A /* libcurl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurl.dylib; path = ../../../../../../usr/local/curl/lib/libcurl.dylib; sourceTree = "<group>"; };
+		A572372B22CF18C8003870E9 /* 2019_summer_project_client */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 2019_summer_project_client; sourceTree = BUILT_PRODUCTS_DIR; };
+		A572372E22CF18C8003870E9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A58966D322EF92B300D3B2C8 /* libjsoncpp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjsoncpp.a; path = "../../api/jsoncpp-master/build/debug/src/lib_json/libjsoncpp.a"; sourceTree = "<group>"; };
+		A5CD6C4022F4C73600B128A0 /* request_sender.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = request_sender.cpp; sourceTree = "<group>"; };
+		A5CD6C4122F4C73600B128A0 /* request_sender.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = request_sender.h; sourceTree = "<group>"; };
+		A5CD6C4322F4D3CE00B128A0 /* request_sender_binary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = request_sender_binary.cpp; sourceTree = "<group>"; };
+		A5CD6C4422F4D3CE00B128A0 /* request_sender_binary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = request_sender_binary.h; sourceTree = "<group>"; };
+		A5CD6C4622F4D47900B128A0 /* request_sender_http.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = request_sender_http.cpp; sourceTree = "<group>"; };
+		A5CD6C4722F4D47900B128A0 /* request_sender_http.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = request_sender_http.h; sourceTree = "<group>"; };
+		A5CD6C4922F7EA6300B128A0 /* timer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = timer.cpp; sourceTree = "<group>"; };
+		A5CD6C4A22F7EA6300B128A0 /* timer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = timer.h; sourceTree = "<group>"; };
+		A5E29ABD22DFDB8100A00DDB /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = "../../openssl-1.1.1c/libcrypto.dylib"; sourceTree = "<group>"; };
+		A5E29ABE22DFDB8100A00DDB /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = "../../openssl-1.1.1c/libssl.a"; sourceTree = "<group>"; };
+		A5E29ABF22DFDB8100A00DDB /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = "../../openssl-1.1.1c/libssl.dylib"; sourceTree = "<group>"; };
+		A5E29AC022DFDB8100A00DDB /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = "../../openssl-1.1.1c/libcrypto.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A572372822CF18C8003870E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A502448C22D6CE3400741B0A /* libcurl.dylib in Frameworks */,
+				A502448D22D6CE3D00741B0A /* libcurl.a in Frameworks */,
+				A5E29AC122DFDB8100A00DDB /* libcrypto.dylib in Frameworks */,
+				A5E29AC222DFDB8100A00DDB /* libssl.a in Frameworks */,
+				A5E29AC322DFDB8100A00DDB /* libssl.dylib in Frameworks */,
+				A5E29AC422DFDB8100A00DDB /* libcrypto.a in Frameworks */,
+				A58966D422EF92B300D3B2C8 /* libjsoncpp.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A50242AE22D6B52300741B0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A58966D322EF92B300D3B2C8 /* libjsoncpp.a */,
+				A5E29AC022DFDB8100A00DDB /* libcrypto.a */,
+				A5E29ABD22DFDB8100A00DDB /* libcrypto.dylib */,
+				A5E29ABE22DFDB8100A00DDB /* libssl.a */,
+				A5E29ABF22DFDB8100A00DDB /* libssl.dylib */,
+				A502448B22D6CE3400741B0A /* libcurl.dylib */,
+				A502448922D6CE2400741B0A /* libcurl.a */,
+				A502448622D6BB2200741B0A /* libcurl.4.dylib */,
+				A502448522D6BB2200741B0A /* libcurl.la */,
+				A502448122D6B9EE00741B0A /* libcurl.a */,
+				A502447F22D6B93A00741B0A /* libcurl.dylib */,
+				A502447D22D6B8CD00741B0A /* libcurl.la */,
+				A502447922D6B7E400741B0A /* libcurl.a */,
+				A502447B22D6B8A700741B0A /* libcurl.a */,
+				A502447722D6B6D600741B0A /* libcurl.4.dylib */,
+				A50243FB22D6B55300741B0A /* libcurl_la-altsvc.lo */,
+				A50243E522D6B55300741B0A /* libcurl_la-amigaos.lo */,
+				A50243EB22D6B55300741B0A /* libcurl_la-asyn-ares.lo */,
+				A50243EF22D6B55300741B0A /* libcurl_la-asyn-thread.lo */,
+				A50243FC22D6B55300741B0A /* libcurl_la-base64.lo */,
+				A50243B222D6B55100741B0A /* libcurl_la-conncache.lo */,
+				A50243ED22D6B55300741B0A /* libcurl_la-connect.lo */,
+				A502439C22D6B55000741B0A /* libcurl_la-content_encoding.lo */,
+				A50243A122D6B55000741B0A /* libcurl_la-cookie.lo */,
+				A502439A22D6B54F00741B0A /* libcurl_la-curl_addrinfo.lo */,
+				A50243B622D6B55100741B0A /* libcurl_la-curl_ctype.lo */,
+				A502439D22D6B55000741B0A /* libcurl_la-curl_des.lo */,
+				A50243D922D6B55200741B0A /* libcurl_la-curl_endian.lo */,
+				A50243AF22D6B55000741B0A /* libcurl_la-curl_fnmatch.lo */,
+				A50243F322D6B55300741B0A /* libcurl_la-curl_get_line.lo */,
+				A50243BE22D6B55100741B0A /* libcurl_la-curl_gethostname.lo */,
+				A50243F122D6B55300741B0A /* libcurl_la-curl_gssapi.lo */,
+				A50243B522D6B55100741B0A /* libcurl_la-curl_memrchr.lo */,
+				A502439F22D6B55000741B0A /* libcurl_la-curl_multibyte.lo */,
+				A50243DF22D6B55200741B0A /* libcurl_la-curl_ntlm_core.lo */,
+				A50243BD22D6B55100741B0A /* libcurl_la-curl_ntlm_wb.lo */,
+				A50243F622D6B55300741B0A /* libcurl_la-curl_path.lo */,
+				A50243A922D6B55000741B0A /* libcurl_la-curl_range.lo */,
+				A50243BB22D6B55100741B0A /* libcurl_la-curl_rtmp.lo */,
+				A50243D122D6B55200741B0A /* libcurl_la-curl_sasl.lo */,
+				A50243AD22D6B55000741B0A /* libcurl_la-curl_sspi.lo */,
+				A50243CB22D6B55200741B0A /* libcurl_la-curl_threads.lo */,
+				A50243BA22D6B55100741B0A /* libcurl_la-dict.lo */,
+				A50243F822D6B55300741B0A /* libcurl_la-doh.lo */,
+				A50243E422D6B55300741B0A /* libcurl_la-dotdot.lo */,
+				A50243A422D6B55000741B0A /* libcurl_la-easy.lo */,
+				A50243E222D6B55300741B0A /* libcurl_la-escape.lo */,
+				A50243E122D6B55300741B0A /* libcurl_la-file.lo */,
+				A50243F922D6B55300741B0A /* libcurl_la-fileinfo.lo */,
+				A50243C222D6B55100741B0A /* libcurl_la-formdata.lo */,
+				A50243AA22D6B55000741B0A /* libcurl_la-ftp.lo */,
+				A50243CA22D6B55200741B0A /* libcurl_la-ftplistparser.lo */,
+				A50243AB22D6B55000741B0A /* libcurl_la-getenv.lo */,
+				A502440422D6B55400741B0A /* libcurl_la-getinfo.lo */,
+				A50243B322D6B55100741B0A /* libcurl_la-gopher.lo */,
+				A50243B822D6B55100741B0A /* libcurl_la-hash.lo */,
+				A50243AC22D6B55000741B0A /* libcurl_la-hmac.lo */,
+				A50243CF22D6B55200741B0A /* libcurl_la-hostasyn.lo */,
+				A50243AE22D6B55000741B0A /* libcurl_la-hostcheck.lo */,
+				A50243B022D6B55000741B0A /* libcurl_la-hostip.lo */,
+				A50243D422D6B55200741B0A /* libcurl_la-hostip4.lo */,
+				A502440322D6B55400741B0A /* libcurl_la-hostip6.lo */,
+				A50243D322D6B55200741B0A /* libcurl_la-hostsyn.lo */,
+				A50243A022D6B55000741B0A /* libcurl_la-http_chunks.lo */,
+				A502439822D6B54F00741B0A /* libcurl_la-http_digest.lo */,
+				A50243C022D6B55100741B0A /* libcurl_la-http_negotiate.lo */,
+				A50243D722D6B55200741B0A /* libcurl_la-http_ntlm.lo */,
+				A50243CD22D6B55200741B0A /* libcurl_la-http_proxy.lo */,
+				A50243A522D6B55000741B0A /* libcurl_la-http.lo */,
+				A50243CC22D6B55200741B0A /* libcurl_la-http2.lo */,
+				A50243EE22D6B55300741B0A /* libcurl_la-idn_win32.lo */,
+				A50243BC22D6B55100741B0A /* libcurl_la-if2ip.lo */,
+				A50243C822D6B55200741B0A /* libcurl_la-imap.lo */,
+				A50243FF22D6B55400741B0A /* libcurl_la-inet_ntop.lo */,
+				A502440122D6B55400741B0A /* libcurl_la-inet_pton.lo */,
+				A50243D822D6B55200741B0A /* libcurl_la-krb5.lo */,
+				A50243D222D6B55200741B0A /* libcurl_la-ldap.lo */,
+				A502439922D6B54F00741B0A /* libcurl_la-llist.lo */,
+				A50243B122D6B55000741B0A /* libcurl_la-md4.lo */,
+				A50243D622D6B55200741B0A /* libcurl_la-md5.lo */,
+				A50243E922D6B55300741B0A /* libcurl_la-memdebug.lo */,
+				A50243E722D6B55300741B0A /* libcurl_la-mime.lo */,
+				A50243DA22D6B55200741B0A /* libcurl_la-mprintf.lo */,
+				A50243F722D6B55300741B0A /* libcurl_la-multi.lo */,
+				A50243A822D6B55000741B0A /* libcurl_la-netrc.lo */,
+				A50243A322D6B55000741B0A /* libcurl_la-non-ascii.lo */,
+				A50243C722D6B55200741B0A /* libcurl_la-nonblock.lo */,
+				A50243F222D6B55300741B0A /* libcurl_la-openldap.lo */,
+				A502439B22D6B54F00741B0A /* libcurl_la-parsedate.lo */,
+				A50243D022D6B55200741B0A /* libcurl_la-pingpong.lo */,
+				A50243C122D6B55100741B0A /* libcurl_la-pop3.lo */,
+				A50243F422D6B55300741B0A /* libcurl_la-progress.lo */,
+				A50243C522D6B55100741B0A /* libcurl_la-psl.lo */,
+				A50243DE22D6B55200741B0A /* libcurl_la-rand.lo */,
+				A50243E322D6B55300741B0A /* libcurl_la-rtsp.lo */,
+				A502440622D6B55400741B0A /* libcurl_la-security.lo */,
+				A50243C622D6B55200741B0A /* libcurl_la-select.lo */,
+				A50243A622D6B55000741B0A /* libcurl_la-sendf.lo */,
+				A50243FD22D6B55400741B0A /* libcurl_la-setopt.lo */,
+				A502440222D6B55400741B0A /* libcurl_la-sha256.lo */,
+				A50243DC22D6B55200741B0A /* libcurl_la-share.lo */,
+				A50243EC22D6B55300741B0A /* libcurl_la-slist.lo */,
+				A50243A222D6B55000741B0A /* libcurl_la-smb.lo */,
+				A50243D522D6B55200741B0A /* libcurl_la-smtp.lo */,
+				A50243B422D6B55100741B0A /* libcurl_la-socks_gssapi.lo */,
+				A50243BF22D6B55100741B0A /* libcurl_la-socks_sspi.lo */,
+				A50243E622D6B55300741B0A /* libcurl_la-socks.lo */,
+				A50243B722D6B55100741B0A /* libcurl_la-speedcheck.lo */,
+				A502440022D6B55400741B0A /* libcurl_la-splay.lo */,
+				A502439722D6B54F00741B0A /* libcurl_la-ssh-libssh.lo */,
+				A50243C922D6B55200741B0A /* libcurl_la-ssh.lo */,
+				A502440522D6B55400741B0A /* libcurl_la-strcase.lo */,
+				A50243F022D6B55300741B0A /* libcurl_la-strdup.lo */,
+				A50243E822D6B55300741B0A /* libcurl_la-strerror.lo */,
+				A50243FE22D6B55400741B0A /* libcurl_la-strtok.lo */,
+				A50243B922D6B55100741B0A /* libcurl_la-strtoofft.lo */,
+				A50243EA22D6B55300741B0A /* libcurl_la-system_win32.lo */,
+				A50243CE22D6B55200741B0A /* libcurl_la-telnet.lo */,
+				A50243DB22D6B55200741B0A /* libcurl_la-tftp.lo */,
+				A50243A722D6B55000741B0A /* libcurl_la-timeval.lo */,
+				A50243C322D6B55100741B0A /* libcurl_la-transfer.lo */,
+				A50243C422D6B55100741B0A /* libcurl_la-url.lo */,
+				A50243F522D6B55300741B0A /* libcurl_la-urlapi.lo */,
+				A50243FA22D6B55300741B0A /* libcurl_la-version.lo */,
+				A502439E22D6B55000741B0A /* libcurl_la-warnless.lo */,
+				A50243E022D6B55200741B0A /* libcurl_la-wildcard.lo */,
+				A50243DD22D6B55200741B0A /* libcurl_la-x509asn1.lo */,
+				A50242D622D6B52400741B0A /* curl-curl_ctype.o */,
+				A50242CF22D6B52400741B0A /* curl-nonblock.o */,
+				A502431022D6B52500741B0A /* curl-strtoofft.o */,
+				A502430D22D6B52500741B0A /* curl-warnless.o */,
+				A50242BE22D6B52400741B0A /* libcurl_la-altsvc.o */,
+				A50242CA22D6B52400741B0A /* libcurl_la-amigaos.o */,
+				A502431A22D6B52600741B0A /* libcurl_la-asyn-ares.o */,
+				A502430022D6B52500741B0A /* libcurl_la-asyn-thread.o */,
+				A50242BB22D6B52400741B0A /* libcurl_la-base64.o */,
+				A50242FF22D6B52500741B0A /* libcurl_la-conncache.o */,
+				A502430322D6B52500741B0A /* libcurl_la-connect.o */,
+				A50242DB22D6B52500741B0A /* libcurl_la-content_encoding.o */,
+				A50242E522D6B52500741B0A /* libcurl_la-cookie.o */,
+				A502431922D6B52600741B0A /* libcurl_la-curl_addrinfo.o */,
+				A50242B322D6B52400741B0A /* libcurl_la-curl_ctype.o */,
+				A502430B22D6B52500741B0A /* libcurl_la-curl_des.o */,
+				A50242D222D6B52400741B0A /* libcurl_la-curl_endian.o */,
+				A502430722D6B52500741B0A /* libcurl_la-curl_fnmatch.o */,
+				A50242C522D6B52400741B0A /* libcurl_la-curl_get_line.o */,
+				A502430122D6B52500741B0A /* libcurl_la-curl_gethostname.o */,
+				A50242B922D6B52400741B0A /* libcurl_la-curl_gssapi.o */,
+				A50242B022D6B52400741B0A /* libcurl_la-curl_memrchr.o */,
+				A50242BC22D6B52400741B0A /* libcurl_la-curl_multibyte.o */,
+				A50242C122D6B52400741B0A /* libcurl_la-curl_ntlm_core.o */,
+				A502430E22D6B52500741B0A /* libcurl_la-curl_ntlm_wb.o */,
+				A50242D122D6B52400741B0A /* libcurl_la-curl_path.o */,
+				A50242E922D6B52500741B0A /* libcurl_la-curl_range.o */,
+				A50242DE22D6B52500741B0A /* libcurl_la-curl_rtmp.o */,
+				A50242D822D6B52400741B0A /* libcurl_la-curl_sasl.o */,
+				A50242B522D6B52400741B0A /* libcurl_la-curl_sspi.o */,
+				A502430922D6B52500741B0A /* libcurl_la-curl_threads.o */,
+				A50242FB22D6B52500741B0A /* libcurl_la-dict.o */,
+				A50242EB22D6B52500741B0A /* libcurl_la-doh.o */,
+				A502430622D6B52500741B0A /* libcurl_la-dotdot.o */,
+				A502431D22D6B52600741B0A /* libcurl_la-easy.o */,
+				A50242DA22D6B52500741B0A /* libcurl_la-escape.o */,
+				A502431E22D6B52600741B0A /* libcurl_la-file.o */,
+				A50242FE22D6B52500741B0A /* libcurl_la-fileinfo.o */,
+				A50242F822D6B52500741B0A /* libcurl_la-formdata.o */,
+				A50242E322D6B52500741B0A /* libcurl_la-ftp.o */,
+				A50242C722D6B52400741B0A /* libcurl_la-ftplistparser.o */,
+				A50242E022D6B52500741B0A /* libcurl_la-getenv.o */,
+				A502431C22D6B52600741B0A /* libcurl_la-getinfo.o */,
+				A502431422D6B52600741B0A /* libcurl_la-gopher.o */,
+				A502431B22D6B52600741B0A /* libcurl_la-hash.o */,
+				A50242DD22D6B52500741B0A /* libcurl_la-hmac.o */,
+				A502430522D6B52500741B0A /* libcurl_la-hostasyn.o */,
+				A50242B222D6B52400741B0A /* libcurl_la-hostcheck.o */,
+				A50242C422D6B52400741B0A /* libcurl_la-hostip.o */,
+				A50242ED22D6B52500741B0A /* libcurl_la-hostip4.o */,
+				A50242F522D6B52500741B0A /* libcurl_la-hostip6.o */,
+				A50242F722D6B52500741B0A /* libcurl_la-hostsyn.o */,
+				A50242D722D6B52400741B0A /* libcurl_la-http_chunks.o */,
+				A50242D022D6B52400741B0A /* libcurl_la-http_digest.o */,
+				A502430C22D6B52500741B0A /* libcurl_la-http_negotiate.o */,
+				A50242EE22D6B52500741B0A /* libcurl_la-http_ntlm.o */,
+				A50242F422D6B52500741B0A /* libcurl_la-http_proxy.o */,
+				A50242EA22D6B52500741B0A /* libcurl_la-http.o */,
+				A502431522D6B52600741B0A /* libcurl_la-http2.o */,
+				A50242F322D6B52500741B0A /* libcurl_la-idn_win32.o */,
+				A50242DC22D6B52500741B0A /* libcurl_la-if2ip.o */,
+				A502431222D6B52500741B0A /* libcurl_la-imap.o */,
+				A50242F922D6B52500741B0A /* libcurl_la-inet_ntop.o */,
+				A50242C222D6B52400741B0A /* libcurl_la-inet_pton.o */,
+				A50242E222D6B52500741B0A /* libcurl_la-krb5.o */,
+				A50242B722D6B52400741B0A /* libcurl_la-ldap.o */,
+				A50242F622D6B52500741B0A /* libcurl_la-llist.o */,
+				A50242D422D6B52400741B0A /* libcurl_la-md4.o */,
+				A50242B822D6B52400741B0A /* libcurl_la-md5.o */,
+				A50242EF22D6B52500741B0A /* libcurl_la-memdebug.o */,
+				A50242FA22D6B52500741B0A /* libcurl_la-mime.o */,
+				A502432022D6B52600741B0A /* libcurl_la-mprintf.o */,
+				A50242FD22D6B52500741B0A /* libcurl_la-multi.o */,
+				A50242D522D6B52400741B0A /* libcurl_la-netrc.o */,
+				A50242BA22D6B52400741B0A /* libcurl_la-non-ascii.o */,
+				A50242E722D6B52500741B0A /* libcurl_la-nonblock.o */,
+				A502431622D6B52600741B0A /* libcurl_la-openldap.o */,
+				A50242B422D6B52400741B0A /* libcurl_la-parsedate.o */,
+				A50242E622D6B52500741B0A /* libcurl_la-pingpong.o */,
+				A502431122D6B52500741B0A /* libcurl_la-pop3.o */,
+				A50242AF22D6B52400741B0A /* libcurl_la-progress.o */,
+				A50242C622D6B52400741B0A /* libcurl_la-psl.o */,
+				A50242C322D6B52400741B0A /* libcurl_la-rand.o */,
+				A50242EC22D6B52500741B0A /* libcurl_la-rtsp.o */,
+				A50242D322D6B52400741B0A /* libcurl_la-security.o */,
+				A50242F222D6B52500741B0A /* libcurl_la-select.o */,
+				A502430822D6B52500741B0A /* libcurl_la-sendf.o */,
+				A502431822D6B52600741B0A /* libcurl_la-setopt.o */,
+				A502430422D6B52500741B0A /* libcurl_la-sha256.o */,
+				A502431722D6B52600741B0A /* libcurl_la-share.o */,
+				A50242E422D6B52500741B0A /* libcurl_la-slist.o */,
+				A50242E122D6B52500741B0A /* libcurl_la-smb.o */,
+				A502430F22D6B52500741B0A /* libcurl_la-smtp.o */,
+				A50242CD22D6B52400741B0A /* libcurl_la-socks_gssapi.o */,
+				A50242E822D6B52500741B0A /* libcurl_la-socks_sspi.o */,
+				A50242B122D6B52400741B0A /* libcurl_la-socks.o */,
+				A50242CB22D6B52400741B0A /* libcurl_la-speedcheck.o */,
+				A50242DF22D6B52500741B0A /* libcurl_la-splay.o */,
+				A50242D922D6B52500741B0A /* libcurl_la-ssh-libssh.o */,
+				A50242F022D6B52500741B0A /* libcurl_la-ssh.o */,
+				A50242CC22D6B52400741B0A /* libcurl_la-strcase.o */,
+				A50242BF22D6B52400741B0A /* libcurl_la-strdup.o */,
+				A502432122D6B52600741B0A /* libcurl_la-strerror.o */,
+				A502430A22D6B52500741B0A /* libcurl_la-strtok.o */,
+				A50242F122D6B52500741B0A /* libcurl_la-strtoofft.o */,
+				A502432222D6B52600741B0A /* libcurl_la-system_win32.o */,
+				A50242FC22D6B52500741B0A /* libcurl_la-telnet.o */,
+				A50242CE22D6B52400741B0A /* libcurl_la-tftp.o */,
+				A50242C022D6B52400741B0A /* libcurl_la-timeval.o */,
+				A502431F22D6B52600741B0A /* libcurl_la-transfer.o */,
+				A502431322D6B52600741B0A /* libcurl_la-url.o */,
+				A502430222D6B52500741B0A /* libcurl_la-urlapi.o */,
+				A50242B622D6B52400741B0A /* libcurl_la-version.o */,
+				A50242BD22D6B52400741B0A /* libcurl_la-warnless.o */,
+				A50242C822D6B52400741B0A /* libcurl_la-wildcard.o */,
+				A50242C922D6B52400741B0A /* libcurl_la-x509asn1.o */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A572372222CF18C8003870E9 = {
+			isa = PBXGroup;
+			children = (
+				A572372D22CF18C8003870E9 /* 2019_summer_project_client */,
+				A572372C22CF18C8003870E9 /* Products */,
+				A50242AE22D6B52300741B0A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A572372C22CF18C8003870E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A572372B22CF18C8003870E9 /* 2019_summer_project_client */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A572372D22CF18C8003870E9 /* 2019_summer_project_client */ = {
+			isa = PBXGroup;
+			children = (
+				A572372E22CF18C8003870E9 /* main.cpp */,
+				A5CD6C4122F4C73600B128A0 /* request_sender.h */,
+				A5CD6C4022F4C73600B128A0 /* request_sender.cpp */,
+				A5CD6C4422F4D3CE00B128A0 /* request_sender_binary.h */,
+				A5CD6C4322F4D3CE00B128A0 /* request_sender_binary.cpp */,
+				A5CD6C4722F4D47900B128A0 /* request_sender_http.h */,
+				A5CD6C4622F4D47900B128A0 /* request_sender_http.cpp */,
+				A5CD6C4A22F7EA6300B128A0 /* timer.h */,
+				A5CD6C4922F7EA6300B128A0 /* timer.cpp */,
+			);
+			path = 2019_summer_project_client;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A572372A22CF18C8003870E9 /* 2019_summer_project_client */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A572373222CF18C8003870E9 /* Build configuration list for PBXNativeTarget "2019_summer_project_client" */;
+			buildPhases = (
+				A572372722CF18C8003870E9 /* Sources */,
+				A572372822CF18C8003870E9 /* Frameworks */,
+				A572372922CF18C8003870E9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 2019_summer_project_client;
+			productName = 2019_summer_project_client;
+			productReference = A572372B22CF18C8003870E9 /* 2019_summer_project_client */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A572372322CF18C8003870E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Joon Kang";
+				TargetAttributes = {
+					A572372A22CF18C8003870E9 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = A572372622CF18C8003870E9 /* Build configuration list for PBXProject "2019_summer_project_client" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A572372222CF18C8003870E9;
+			productRefGroup = A572372C22CF18C8003870E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A572372A22CF18C8003870E9 /* 2019_summer_project_client */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A572372722CF18C8003870E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5CD6C4822F4D47900B128A0 /* request_sender_http.cpp in Sources */,
+				A5CD6C4B22F7EA6300B128A0 /* timer.cpp in Sources */,
+				A5CD6C4522F4D3CE00B128A0 /* request_sender_binary.cpp in Sources */,
+				A5CD6C4222F4C73600B128A0 /* request_sender.cpp in Sources */,
+				A572372F22CF18C8003870E9 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A572373022CF18C8003870E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A572373122CF18C8003870E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A572373322CF18C8003870E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3XXAHN3WU5;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/curl/include,
+					"../../api/openssl-1.1.1c/include",
+					"../../api/jsoncpp-master/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/curl/lib,
+					"../../api/openssl-1.1.1c",
+					"../../api/jsoncpp-master/build/debug/src/lib_json",
+				);
+				NEW_SETTING = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A572373422CF18C8003870E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3XXAHN3WU5;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/curl/include,
+					"../../api/openssl-1.1.1c/include",
+					"../../api/jsoncpp-master/include",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/curl/lib,
+					"../../api/openssl-1.1.1c",
+					"../../api/jsoncpp-master/build/debug/src/lib_json",
+				);
+				NEW_SETTING = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A572372622CF18C8003870E9 /* Build configuration list for PBXProject "2019_summer_project_client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A572373022CF18C8003870E9 /* Debug */,
+				A572373122CF18C8003870E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A572373222CF18C8003870E9 /* Build configuration list for PBXNativeTarget "2019_summer_project_client" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A572373322CF18C8003870E9 /* Debug */,
+				A572373422CF18C8003870E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A572372322CF18C8003870E9 /* Project object */;
+}

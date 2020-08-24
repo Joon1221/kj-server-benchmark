@@ -1,0 +1,21 @@
+dependencies: \
+  /Users/joonkang/Documents/2019_summer_project/kj_server_benchmark/client/client/2019_summer_project_client/request_sender_http.cpp \
+  /Users/joonkang/Documents/2019_summer_project/kj_server_benchmark/client/client/2019_summer_project_client/request_sender_http.h \
+  /Users/joonkang/Documents/2019_summer_project/kj_server_benchmark/client/client/2019_summer_project_client/request_sender.h \
+  /usr/local/curl/include/curl/curl.h \
+  /usr/local/curl/include/curl/curlver.h \
+  /usr/local/curl/include/curl/system.h \
+  /usr/local/curl/include/curl/easy.h \
+  /usr/local/curl/include/curl/multi.h \
+  /usr/local/curl/include/curl/urlapi.h \
+  ../../api/jsoncpp-master/include/json/json.h \
+  ../../api/jsoncpp-master/include/json/autolink.h \
+  ../../api/jsoncpp-master/include/json/config.h \
+  ../../api/jsoncpp-master/include/json/allocator.h \
+  ../../api/jsoncpp-master/include/json/version.h \
+  ../../api/jsoncpp-master/include/json/features.h \
+  ../../api/jsoncpp-master/include/json/forwards.h \
+  ../../api/jsoncpp-master/include/json/reader.h \
+  ../../api/jsoncpp-master/include/json/value.h \
+  ../../api/jsoncpp-master/include/json/writer.h \
+  /Users/joonkang/Documents/2019_summer_project/kj_server_benchmark/client/client/2019_summer_project_client/timer.h
