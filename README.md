@@ -12,9 +12,9 @@ archetype to use for different scenarios.
 Features
 --------
 
-- Runs tests on 4 server types (**C++ Asynchronous**, **C++ Synchronous**, **JavaServlet** using **Apache Tomcat**, and **Node.js**).
+- Runs tests on four server types (**C++ Asynchronous**, **C++ Synchronous**, **JavaServlet** using **Apache Tomcat**, and **Node.js**).
 - Tracks **ping** and **bitrate**.
-- Runs tests on 2 scenarios (**Chat** server and **Streaming** server).
+- Runs tests on two scenarios (**Chat** server and **Streaming** server).
 
 Installation
 ------------
@@ -260,7 +260,7 @@ Change apache-tomcat-9.0.21 to apache-tomcat-X.X.XX
 #### Gson
 
 
-Under `kj_server_benchmark/server/javaservlet/makefile` update Gson java class path to the correct version
+Under `kj_server_benchmark/server/javaservlet/makefile` update Gson java class path to the correct version.
 
 ```
 Change ../../api/gson/gson-2.8.5.jar to ../../api/gson/gson-X.X.X.jar
@@ -270,8 +270,54 @@ Change ../../api/gson/gson-2.8.5.jar to ../../api/gson/gson-X.X.X.jar
 Usage
 -----
 
-Instructions on how to run the program can be found on USERS_GUIDE.txt 
 
+### Turn on Servers 
+*Note that C++ Asynchronous Server can only be run on linux based operating systems.*
+
+<br>
+
+C++ Asynchronous Server
+	```
+	cd kj_server_benchmark/server/c++
+	```
+	- Compile and run the server: `make async`
+	- Stop the server: `Ctrl + C`
+
+C++ Synchronous Server
+	```
+	cd kj_server_benchmark/server/c++
+	```
+	- Compile and run the server: `make sync`
+	- Stop the server: `Ctrl + C`
+
+Java Servlet Server
+	```
+	cd kj_server_benchmark/server/javaservlet
+	```
+	- Compile and run the server: `make`
+	- Stop the server: `make stop`
+
+Node.js Server
+	```
+	cd kj_server_benchmark/server/node.js
+	```
+	- Compile and run the server: `make`
+	- Stop the server: `Ctrl + C`
+	
+
+<br>
+
+### Run the Program
+Open `kj_server_benchmark/client/client/2019_summer_project_client.xcodeproj` and build+run client: 
+```
+⌘ + R
+```
+
+Input value for IP address and number of simultaneous connections.
+
+<p align="center">
+  <img src="./assets/demo.png" alt="Size Limit CLI" width="600">
+</p>
 
 Libraries
 ---------
