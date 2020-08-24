@@ -20,27 +20,34 @@ Installation
 ------------
 
 ### Step 1: Install and Set Up Ubuntu Server as a Virtual Machine
-- Download VirtualBox (6.0.8)
-	- https://www.virtualbox.org/wiki/Downloads
-- Download Ubuntu Server (18.04.2 LTS)
-	- https://ubuntu.com/download/server
-- Create new virtual machine
-	- Turn on Virtual Box and create
-	- Ram: 4096 MB
-	- Storage: 10.0 GB
-	- Type: Linux
-	- Version: Ubuntu (64-bit)
-- Set bootable device to the downloaded Ubuntu iso file
-	- Enter Settings -> Storage
-	- Click on the empty disk under "Controller: IDE"
-	- Next to "Optical Drive:", click on the disk icon, and select
-	  the downloaded iso file
-- Start the device and follow the instructions to initialize the system
-- Enter Settings -> Storage once again and eject the startup disk
+Download VirtualBox (6.0.8): https://www.virtualbox.org/wiki/Downloads
+	
+	
+Download Ubuntu Server (18.04.2 LTS): https://ubuntu.com/download/server
 
-### Step 2: Download Necessary APIs
-- The APIs will be separated into three sections, one for each language.
-- C++:
+
+Turn on Virtual Box and create new virtual machine (*Note that specifications do not need to be identical*)
+
+```
+Ram: 4096 MB
+Storage: 10.0 GB
+Type: Linux
+Version: Ubuntu (64-bit)
+```
+
+Set bootable device to the downloaded Ubuntu iso file
+- Enter `Settings -> Storage`
+- Click on the empty disk under "Controller: IDE"
+- Next to "Optical Drive:", click on the disk icon, and select
+	  the downloaded iso file
+	  
+	  
+Start the device and follow the instructions to initialize the system
+
+
+Enter `Settings -> Storage` once again and eject the startup disk
+
+### Step 2: Install C++ Prerequisites
 	- Download cmake to install libraries
 		- Open terminal and paste the following
 		- MacOS: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -77,7 +84,7 @@ Installation
 		- ./configure --prefix=/usr/local/curl
 		- make
 		- sudo make install
-- Java:
+#### Java
 	- Download java. Open terminal and paste the following
 		- apt-get install default-jdk
 		- java -version 
@@ -112,12 +119,12 @@ Installation
 	- Move the .jar file to kj_server_benchmark/api/gson
 	- Create a copy and move the copy to kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes
 	- Download web.xml and replace it with the web.xml located at kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF
-- Node.js:
-	- Download express
-	- Open terminal and paste the following
-		- cd kj_server_benchmark/api
-		- npm install express@">=3.0.0 <4.0.0" --save
-
+	
+#### Node.js:
+``` Shell
+cd kj_server_benchmark/api
+npm install express@">=3.0.0 <4.0.0" --save
+```
 
 ### Step 3: Update Header and Library Search Paths (Optional)
 *Note* If all the steps above are done exactly as stated, with all api 
