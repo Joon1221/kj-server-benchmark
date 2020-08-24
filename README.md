@@ -39,7 +39,7 @@ Version: Ubuntu (64-bit)
 
 Set bootable device to the downloaded Ubuntu iso file.
 - Enter `Settings -> Storage`
-- Click on the empty disk under *`Controller: IDE`.
+- Click on the empty disk under `Controller: IDE`.
 - Next to `Optical Drive:`, click on the disk icon, and select
 	  the downloaded iso file.
 
