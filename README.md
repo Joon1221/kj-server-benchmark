@@ -51,9 +51,10 @@ Start the device and follow the instructions to initialize the system.
 
 Enter `Settings -> Storage` once again and eject the startup disk.
 
+<br>
+
 ### Step 2: Install C++ Prerequisites
 
-<br>
 
 *Move all downloaded files to `kj_server_benchmark/api`.*
 
@@ -137,7 +138,6 @@ sudo make install
 ```
 ### Step 3: Install JavaServlet Prerequisites
 
-<br>
 
 *Move all downloaded files to `kj_server_benchmark/api`.*
 
@@ -220,9 +220,9 @@ npm install express@">=3.0.0 <4.0.0" --save
 ```
 
 ### Step 4: Update Header and Library Search Paths (Optional)
-*Note* If all the steps above are done exactly as stated, with all api 
+*If all the steps above are done exactly as stated, with all api 
 downloaded to the same version, this step can be skipped. The steps will be 
-separated for each library.
+separated for each library.*
 
 - Openssl
 	- Locate and open 2019_summer_project_client.xcodeproj. It should be 
@@ -273,14 +273,14 @@ Libraries
 Goals
 -----
 
--Test the performance between the C++ Synchronous, C++ Asynchronous, JavaServlet,
+- Test the performance between the C++ Synchronous, C++ Asynchronous, JavaServlet,
   and Node.js servers
   
   
--Test the performance between Oracle Database and MySQL Database
+- Test the performance between Oracle Database and MySQL Database
 
 
--Create multiple tests to simulate different environment
+- Create multiple tests to simulate different environment
 	- Gaming
 		- Real Time
 		- Turn-based
@@ -289,7 +289,7 @@ Goals
 	- Simple Websites
 	- Video/Music Streaming
 	- Transactions
-Visually represent the server performance 
+- Graphically represent the server performance 
 
 
 Design Decisions
@@ -302,7 +302,6 @@ Design Decisions
 - Create two separate Ubuntu virtual machines
 	- One is for the server itself and one is for the database
 	
-
 	
 Staff
 -----
