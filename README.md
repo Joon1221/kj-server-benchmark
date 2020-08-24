@@ -277,41 +277,38 @@ Usage
 <br>
 
 C++ Asynchronous Server
-	```
-	cd kj_server_benchmark/server/c++
-	```
-	- Compile and run the server: `make async`
-	- Stop the server: `Ctrl + C`
+```
+cd kj_server_benchmark/server/c++
+```
+- Compile and run the server: `make async`
+- Stop the server: `Ctrl + C`
 
 C++ Synchronous Server
-	```
-	cd kj_server_benchmark/server/c++
-	```
-	- Compile and run the server: `make sync`
-	- Stop the server: `Ctrl + C`
+```
+cd kj_server_benchmark/server/c++
+```
+- Compile and run the server: `make sync`
+- Stop the server: `Ctrl + C`
 
 Java Servlet Server
-	```
-	cd kj_server_benchmark/server/javaservlet
-	```
-	- Compile and run the server: `make`
-	- Stop the server: `make stop`
+```
+cd kj_server_benchmark/server/javaservlet
+```
+- Compile and run the server: `make`
+- Stop the server: `make stop`
 
 Node.js Server
-	```
-	cd kj_server_benchmark/server/node.js
-	```
-	- Compile and run the server: `make`
-	- Stop the server: `Ctrl + C`
+```
+cd kj_server_benchmark/server/node.js
+```
+- Compile and run the server: `make`
+- Stop the server: `Ctrl + C`
 	
 
 <br>
 
 ### Run the Program
-Open `kj_server_benchmark/client/client/2019_summer_project_client.xcodeproj` and build+run client: 
-```
-⌘ + R
-```
+Build and run client using **Xcode**: `⌘ + R`
 
 Input value for IP address and number of simultaneous connections.
 
