@@ -159,7 +159,7 @@ Paste the following at the very bottom (*replace X with the java version found p
 export JAVA_HOME=/usr/lib/jvm/java-X-openjdk-amd64
 ```
 
-Download and extract apache tomcat (9.0.21): https://tomcat.apache.org/download-90.cgi
+Download and extract Apache Tomcat (9.0.21): https://tomcat.apache.org/download-90.cgi
 
 ``` Shell
 cd kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/conf
@@ -171,7 +171,7 @@ keytool  -genkey -alias server-alias -keyalg RSA -keypass changeit -storepass ch
 nano server.xml
 ```
 
-Paste the following underneath `<Connector port="8080" ... redirectPort="8443" />`.
+Paste the following underneath ```XML <Connector port="8080" ... redirectPort="8443" />```.
 
 ``` XML
 <Connector
@@ -193,7 +193,7 @@ mkdir classes
 mkdir lib
 ```
 
-Download gson (2.8.5): https://search.maven.org/artifact/com.google.code.gson/gson/2.8.5/jar
+Download Gson (2.8.5): https://search.maven.org/artifact/com.google.code.gson/gson/2.8.5/jar
 
 <br>
 
@@ -217,39 +217,53 @@ cd kj_server_benchmark/api
 npm install express@">=3.0.0 <4.0.0" --save
 ```
 
-### Step 4: Update Header and Library Search Paths (Optional)
-*If all the steps above are done exactly as stated, with all api 
-downloaded to the same version, this step can be skipped. The steps will be 
-separated for each library.*
+### Step 5: Update Header and Library Search Paths (Optional)
+*If all the steps above are done exactly as stated, with all api and library
+downloaded to the same version, this step can be skipped.*
 
-- Openssl
-	- Locate and open 2019_summer_project_client.xcodeproj. It should be 
-	  located at kj_server_benchmark/client/client
-	- Click on the blue icon located near the top left
-	- Go to Build Settings and locate the two flags "Header Search Paths"
-	  and "Library Search Paths"
-	- Update "Header Search Paths" to the correct openssl version
-		- Change ../../api/openssl-1.1.1c/include to ../../api/openssl-X.X.Xx/include 
-	- Update "Library Search Paths" to the correct openssl version
-		- Change ../../api/openssl-1.1.1c to ../../api/openssl-X.X.Xx
-	- Locate and open the makefile for the c++ servers. It should be located
-	  at kj_server_benchmark/server/c++
-	- Update the header search flag (both instances)
-		- Change -I"../../api/openssl-1.1.1c/include" to -I"../../api/openssl-X.X.Xx/include"
-	- Update the library search flag (both instances)
-		- Change -L"../../openssl-1.1.1c" to -L"../../openssl-X.X.Xx"
-- Tomcat
-	- Locate and open the makefile for the java servlet server. It should 
-	  be located at kj_server_benchmark/server/javaservlet
-	- Update all five instances of apache-tomcat-9.0.21
-		- Change apache-tomcat-9.0.21 to apache-tomcat-X.X.XX
+#### OpenSSL
 
-- gson
-	- Locate and open the makefile for the java servlet server. It should 
-	  be located at kj_server_benchmark/server/javaservlet
-	- Update class path
-		- Change ../../api/gson/gson-2.8.5.jar to ../../api/gson/gson-X.X.X.jar
 
+Open `kj_server_benchmark/client/client2019_summer_project_client.xcodeproj`.
+
+<br>
+
+Under `Project Settings -> Build Settings -> Header Search Paths` update OpenSSL header path to the correct version
+ ```
+ ../../api/openssl-X.X.Xx/include 
+ ```
+Under `Project Settings -> Build Settings -> Library Search Paths` update OpenSSL library path to the correct version
+```
+../../api/openssl-X.X.Xx
+```
+
+Close Xcode project.
+
+
+Under `kj_server_benchmark/server/c++/makefile` update OpenSSL header and library path to the correct version
+```
+-I"../../api/openssl-X.X.Xx/include"
+
+
+-L"../../openssl-X.X.Xx"
+```
+
+#### Tomcat
+
+
+Under `kj_server_benchmark/server/javaservlet/makefile` update all five instances of `apache-tomcat-9.0.21` to the correct version
+```
+apache-tomcat-X.X.XX
+```
+
+#### Gson
+
+
+Under `kj_server_benchmark/server/javaservlet/makefile` update Gson java class path to the correct version
+
+```
+Change ../../api/gson/gson-2.8.5.jar to ../../api/gson/gson-X.X.X.jar
+```
 
 
 Usage
