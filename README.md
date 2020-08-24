@@ -5,7 +5,7 @@ kj_server_benchmark is a tool used to compare the performance of different
 server set-ups so users can make a more informed decisions on what server 
 archetype to use for different scenarios. 
 
-<p align="center">
+<p align="left">
   <img src="./assets/demoIMG.png" alt="Size Limit CLI" width="600">
 </p>
 
@@ -311,7 +311,7 @@ cd kj_server_benchmark/server/node.js
 - Input value for IP address and number of simultaneous connections.
 
 <p align="center">
-  <img src="./assets/demo.png" alt="Size Limit CLI" width="600">
+  <img src="./assets/demo.gif" alt="Size Limit CLI" width="600">
 </p>
 
 Libraries
