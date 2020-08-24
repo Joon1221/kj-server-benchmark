@@ -123,7 +123,6 @@ Download and extract openssl (1.1.1c): https://www.openssl.org/source/
 	```
 	*Make sure to replace ... with the location of the project.*
 
-<br>
 
 Download and extract curl (7.65.1): https://curl.haxx.se/download.html
 
@@ -136,41 +135,78 @@ make
 
 sudo make install
 ```
-#### Java
-	- Download java. Open terminal and paste the following
-		- apt-get install default-jdk
-		- java -version 
-		- nano ~/.bashrc
-		- Paste the following at the very bottom (replace X with the java version found previously)
-		- export JAVA_HOME=/usr/lib/jvm/java-X-openjdk-amd64
-	- Download and extract apache tomcat (9.0.21)
-		- https://tomcat.apache.org/download-90.cgi
-	- Move the folder into kj_server_benchmark/api
-	- Open terminal and paste the following
-		- cd kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/ 
-	- Create https connection
-		- cd kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/conf
-		- keytool  -genkey -alias server-alias -keyalg RSA -keypass changeit -storepass changeit -keystore localhost.jks
-		- nano server.xml
-		- Paste the following underneath <Connector port="8080" ... redirectPort="8443" />
-		- <Connector
-			protocol="HTTP/1.1"
-			port="8443" maxThreads="200"
-			scheme="https" secure="true" SSLEnabled="true"
-			keystoreFile="conf\localhost.jks" keystorePass="xxxx"
-			clinetAuth="false" sslProtocol="TLS" />
-	- Create folders for libraries and classes
-		- cd kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF
-		- mkdir classes
-		- mkdir lib
-	- Download gson (2.8.5)
-		- https://search.maven.org/artifact/com.google.code.gson/gson/2.8.5/jar
-	- Create new folder called gson in the api folder
-		- cd kj_server_benchmark/api
-		- mkdir gson
-	- Move the .jar file to kj_server_benchmark/api/gson
-	- Create a copy and move the copy to kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes
-	- Download web.xml and replace it with the web.xml located at kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF
+### Step 2: Install C++ Prerequisites
+
+<br>
+
+*Move all downloaded files to `kj_server_benchmark/api`.*
+
+<br>
+
+Download java. 
+``` Shell
+apt-get install default-jdk
+
+
+java -version 
+
+
+nano ~/.bashrc
+```
+
+Paste the following at the very bottom (*replace X with the java version found previously*)
+
+``` Shell
+export JAVA_HOME=/usr/lib/jvm/java-X-openjdk-amd64
+```
+
+Download and extract apache tomcat (9.0.21): https://tomcat.apache.org/download-90.cgi
+
+``` Shell
+cd kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/conf
+
+
+keytool  -genkey -alias server-alias -keyalg RSA -keypass changeit -storepass changeit -keystore localhost.jks
+
+
+nano server.xml
+```
+
+Paste the following underneath `<Connector port="8080" ... redirectPort="8443" />`
+
+``` XML
+- <Connector
+	protocol="HTTP/1.1"
+	port="8443" maxThreads="200"
+	scheme="https" secure="true" SSLEnabled="true"
+	keystoreFile="conf\localhost.jks" keystorePass="xxxx"
+	clinetAuth="false" sslProtocol="TLS" />
+```
+
+Create folders for libraries and classes
+``` Shell
+cd kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF
+
+
+mkdir classes
+
+
+mkdir lib
+```
+
+Download gson (2.8.5): https://search.maven.org/artifact/com.google.code.gson/gson/2.8.5/jar
+
+<br>
+
+Move the .jar file to kj_server_benchmark/api/gson
+
+<br>
+
+Create a copy and move the copy to kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF/classes
+
+<br>
+
+Download web.xml from git repository and replace it with the web.xml located at kj_server_benchmark/api/tomcat/apache-tomcat-9.0.21/webapps/ROOT/WEB-INF
 	
 #### Node.js:
 ``` Shell
